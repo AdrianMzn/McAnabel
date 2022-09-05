@@ -13,9 +13,9 @@ IDEA:
 
 TAREAS:
 
-    Crear la API -> Jorge
+    Crear la API y sacar imagenes de pizzas  -> Jorge
 
-    Sacar la info de las pizzas -> Adrian
+    Sacar la info de las pizzas y sacar imagenes de pizzas -> Adrian
 
     Modificar tema de las pizzas y juntarlo al proyecto de React -> Katty, Mario, Patricia
 
