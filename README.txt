@@ -9,3 +9,14 @@ IDEA:
     Tema de pizzas -> https://technext.github.io/pizza/index.html# 
 
     API pizzas -> https://pizzaapp.docs.apiary.io/#reference/0/restaurants/get-the-menu
+
+
+TAREAS:
+
+    Crear la API -> Jorge
+
+    Sacar la info de las pizzas -> Adrian
+
+    Modificar tema de las pizzas y juntarlo al proyecto de React -> Katty, Mario, Patricia
+
+
