@@ -20,3 +20,7 @@ TAREAS:
     Modificar tema de las pizzas y juntarlo al proyecto de React -> Katty, Mario, Patricia
 
 
+PAGINAS:
+
+
+
