@@ -23,6 +23,7 @@ export class CreaPedido extends Component {
         )
     }
 
+    
     componentDidMount(){
         console.log("Paso 3. El componente se ha montado");
     
