@@ -31,7 +31,7 @@ export class CreaPedido extends Component {
         var request = new XMLHttpRequest();
 
         // Pillamos los datos de las pizzas del JSON
-        request.open('GET', this.state.rutaPizzas + "pizzas");
+        request.open('GET', this.state.rutaRestaurante + "pizzas", false);
         request.onreadystatechange = function () {
             if (this.readyState === 4) {
               console.log("------------PIZZAS------------");
@@ -43,7 +43,7 @@ export class CreaPedido extends Component {
         request.send();
 
         // Pillamos los datos de las pastas del JSON
-        request.open('GET', this.state.rutaPizzas + "pastas");
+        request.open('GET', this.state.rutaRestaurante + "pastas", false);
         request.onreadystatechange = function () {
             if (this.readyState === 4) {
               console.log("------------PASTAS------------");
@@ -55,7 +55,7 @@ export class CreaPedido extends Component {
         request.send();
 
         // Pillamos los datos de las vinos del JSON
-        request.open('GET', this.state.rutaPizzas + "vinos");
+        request.open('GET', this.state.rutaRestaurante + "vinos", false);
         request.onreadystatechange = function () {
             if (this.readyState === 4) {
               console.log("------------VINOS------------");
@@ -67,7 +67,7 @@ export class CreaPedido extends Component {
         request.send();
 
         // Pillamos los datos de las bebidas del JSON
-        request.open('GET', this.state.rutaPizzas + "bebidas");
+        request.open('GET', this.state.rutaRestaurante + "bebidas", false);
         request.onreadystatechange = function () {
             if (this.readyState === 4) {
               console.log("------------BEBIDAS------------");

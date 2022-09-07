@@ -1,0 +1,134 @@
+{  
+  "pizzas": [
+        {
+            "id": 1,
+            "nombre": "Carbonara",
+            "ingredientes":[ "Crema Fresca", "Mozarella", "Bacon", "Cebolla", "Champiñon"],
+            "precio": 21.99,
+            "imagen": "https://www.dominospizza.es/images/PolloParrillaDelivery_P2200923_0_ES.png",
+            "descripción": "La más cremosa que hayas probado jamás"
+        },
+        {
+            "id": 2,
+            "nombre": "Barbacoa",
+            "ingredientes":[ "Salsa BBQ", "Mozarella", "Vacuno", "Cebolla", "Bacon"],
+            "precio": 22.99,
+            "imagen": "https://s4d-images.telepizza.es/Products/Original/Barbacoa_con_Cuarto_de_Libra-2567.jpeg",
+            "descripción": "Con salsa barbacoa casera y un sabor inigualable"
+        },
+        {
+            "id": 3,
+            "nombre": "American Legend",
+            "ingredientes":[ "Salsa BBQ Texas", "Mozarella", "Bacon crispy", "Pollo a la Parrilla", "Vacuno", "Cebolla Caramelizada", "Bacon", "Borde de chedar"],
+            "precio": 25.99,
+            "imagen": "https://2.bp.blogspot.com/-43YD4CXCTNM/W5l_frW9_QI/AAAAAAAAeL4/Wv3drGw4qPo_skxXxSzBBNsnU1Sz5A91QCLcBGAs/s1600/pulled-pork-pizza-2013x600.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "Anabelle Speciale",
+            "ingredientes":[ "Mozarella","Tomahack Ahumado desmenuzado", "Cebolla Morada", "Pimiento Rojo", "Pimiento Verde", "Olivas cortadas"],
+            "precio":26.50,
+            "imagen": "",
+            "descripción": "La especialidad de la casa, esta muy buena tu come y calla"
+
+        }
+    ],
+    "pastas": [
+        {
+            "id": 1,
+            "nombre": "Pesto",
+            "ingredientes": "Hierbas"
+        }
+    ],
+    "bebidas": [
+        {
+            "id": 1,
+            "nombre": "Fanta Naranja",
+            "precio": 2.50,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Fanta_logo_%282009%29.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Coca Cola",
+            "precio": 2.50,
+            "imagen": "https://d2j6dbq0eux0bg.cloudfront.net/images/26330001/2458603073.jpg"
+        },
+        {
+            "id": 3,
+            "nombre": "Agua Mineral",
+            "precio": 1.50,
+            "imagen": "https://www.ifema.es/mbfw-madrid/img/xl/fontvella-fonter/noticia_font_vella.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "Nestea",
+            "precio": 2.50,
+            "imagen": "https://pizzanapoli.es/3112-home_default/Nestea.jpg"
+        },
+        {
+            "id": 5,
+            "nombre": "Fanta Limon",
+            "precio": 2.50,
+            "imagen": "https://carta.gesmabit.es/49-home_default/producto.jpg"
+        }
+
+    ],
+    
+    "vinos": [
+        {
+            "id": 1,
+            "nombre": "Viña el Pisón 2019",
+            "puntuacion": 99,
+            "año":2019,
+            "descripción": "Elaborado con variedad de uva tempranillo, se trata de un vino elegante y complejo, de finos taninos y potencia, con aromas a bayas silvestres, especias, hierba y regaliz que lo convierten en un vino envolvente",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170227936.jpg",
+            "precio": 350.00
+        },
+        {
+            "id": 2,
+            "nombre": "Vega Sicilia Único Reserva",
+            "puntuacion": 98,
+            "año":2022,
+            "descripción": "Con un intenso color cereza y aromas a fruta madura y especias, este vino D. O. Ribera del Duero es un tinto fino con 5% de uva cabernet sauvignon que rinde homenaje a la tradición vinícola más arraigada. Equilibrado, persistente y estructurado durante su cata",
+            "imagen":"https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170255150.jpg",
+            "precio": 413.25
+        },
+        {
+            "id": 3,
+            "nombre": "La Faraona 2017",
+            "puntuacion": 98,
+            "año":2017,
+            "descripción": "Nacido de viñedos con más de setenta años de antigüedad, el vino La Faraona 2017 de uva mencía se sitúa entre los mejores vinos tintos españoles. Muy balanceado, intenso, de gran elegancia y taninos muy finos",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170274038.jpg",
+            "precio": 1190.90
+        },
+        {
+            "id": 4,
+            "nombre": "Alabaster 2018",
+            "puntuacion": 97,
+            "año":2018,
+            "descripción": "Sin duda una de las opciones perfectas para saborear un excelente vino D. O. Toro, el Alabaster 2018 es un tinto elaborado con la variedad de uva tradicional que da nombre a su denominación de origen. Un vino clásico con las cualidades que se esperan de los mejores Toro, largo y sedoso en el paladar",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170291842.jpg",
+            "precio": 139.90
+        },
+        {
+            "id": 5,
+            "nombre": "Vega Sicilia Único 2010 Magnum",
+            "puntuacion": 96,
+            "año":2010,
+            "descripción": "La añada de 2010 de la versión magnum de Vega Sicilia Único supone una cita irrepetible con lo mejor de lo mejor de la enología. Una estructura delicada y taninos finísimos, con aromas rústicos a frutas negras y tabaco",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170396801.jpg",
+            "precio": 966.79
+        },
+        {
+            "id": 6,
+            "nombre": "Doix 2016",
+            "puntuacion": 94,
+            "año":2016,
+            "descripción": "La Finca Mas Doix, ubicada en la zona del Montsant y la Sierra del Molló, elabora desde hace más de veinte años sus vinos Doix. Este D. O. Priorat alcanza una calidad extraordinaria con su Doix 2016, un vino de uva cariñena y garnacha elegante, de buena acidez y largo en la cata",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170543183.jpg",
+            "precio": 89.90
+        }
+    ]
+    
+}
