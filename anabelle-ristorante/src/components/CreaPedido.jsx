@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./CreaPedido.css"
 
 export class CreaPedido extends Component {
 
@@ -20,7 +21,7 @@ export class CreaPedido extends Component {
     render() {
         return (
             <div>
-                <div>
+                <div className="container">
                     <h1>PRODUCTOS</h1>
                     <table>
                         <thead>
@@ -65,6 +66,31 @@ export class CreaPedido extends Component {
                         </tbody>
                     </table>
                     
+                </div>
+
+                <div className="container center">
+
+                    <div className="row fila">
+                        <div className="col-md-6">
+                            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnS4K5ReDNjSZsm64uQQ9v8AzZtCqssTc2SA&usqp=CAU' alt="aa" />
+                        </div>
+                        <div className="col-md-6">
+                            <img src="https://images.aws.nestle.recipes/resized/1828b2ea10adc8c9f710fcf959a55a51_PASTA-AL-ROMERO-Lunch_1200_600.png" alt="Pastas" />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-md-6">
+                            <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bebidas-verano-portada-elle-1658494280.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*" alt="Bebidas" />
+                        </div>
+                        <div className="col-md-6">
+                            <img src="https://images.hola.com/imagenes/cocina/escuela/200907079224/temperatura/vinos/enologia/0-876-296/temperatura-adobe-t.jpg?tx=w_568" alt="Vinos" />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        Promociones
+                    </div>
                 </div>
             </div>
         )
