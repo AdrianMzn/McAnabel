@@ -19,64 +19,86 @@ export class CreaPedido extends Component {
 
     render() {
         return (
-            <div>Crear tu pedido</div>
+            <div>
+                <div>
+                    <h1>PRODUCTOS</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.state.pizzas.map( (pizza) => {
+                                return ( 
+                                    <tr key={pizza.nombre}>
+                                        <td>{pizza.nombre}</td>
+                                        <td>Pizza</td>
+                                    </tr>
+                                )
+                            })}
+                            {this.state.bebidas.map( (bebida) => {
+                                return ( 
+                                    <tr key={bebida.nombre}>
+                                        <td>{bebida.nombre}</td>
+                                        <td>Bebida</td>
+                                    </tr>
+                                )
+                            })}
+                            {this.state.vinos.map( (vino) => {
+                                return ( 
+                                    <tr key={vino.nombre}>
+                                        <td>{vino.nombre}</td>
+                                        <td>Vino</td>
+                                    </tr>
+                                )
+                            })}
+                            {this.state.pastas.map( (pasta) => {
+                                return ( 
+                                    <tr key={pasta.nombre}>
+                                        <td>{pasta.nombre}</td>
+                                        <td>Pasta</td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
         )
     }
 
-    
-    componentDidMount(){
+    llamarAPI = async(URL) => {
+        const respuesta = await fetch (URL);
+        const data = await respuesta.json();
+        return data;
+    }
+
+    async componentDidMount(){
         console.log("Paso 3. El componente se ha montado");
     
-        
-        var request = new XMLHttpRequest();
+        //Pedimos las pizzas
+        let pizzasNew = await this.llamarAPI(this.state.rutaRestaurante + "pizzas");
+        this.setState({
+            pizzas: pizzasNew
+        })
 
-        // Pillamos los datos de las pizzas del JSON
-        request.open('GET', this.state.rutaRestaurante + "pizzas", false);
-        request.onreadystatechange = function () {
-            if (this.readyState === 4) {
-              console.log("------------PIZZAS------------");
-              console.log('Status:', this.status);
-              console.log('Headers:', this.getAllResponseHeaders());
-              console.log('Body:', this.responseText);
-            }
-        };
-        request.send();
+        let pastasNew = await this.llamarAPI(this.state.rutaRestaurante + "pastas");
+        this.setState({
+            pastas: pastasNew
+        })
 
-        // Pillamos los datos de las pastas del JSON
-        request.open('GET', this.state.rutaRestaurante + "pastas", false);
-        request.onreadystatechange = function () {
-            if (this.readyState === 4) {
-              console.log("------------PASTAS------------");
-              console.log('Status:', this.status);
-              console.log('Headers:', this.getAllResponseHeaders());
-              console.log('Body:', this.responseText);
-            }
-        };
-        request.send();
+        let vinosNew = await this.llamarAPI(this.state.rutaRestaurante + "vinos");
+        this.setState({
+            vinos: vinosNew
+        })
 
-        // Pillamos los datos de las vinos del JSON
-        request.open('GET', this.state.rutaRestaurante + "vinos", false);
-        request.onreadystatechange = function () {
-            if (this.readyState === 4) {
-              console.log("------------VINOS------------");
-              console.log('Status:', this.status);
-              console.log('Headers:', this.getAllResponseHeaders());
-              console.log('Body:', this.responseText);
-            }
-        };
-        request.send();
-
-        // Pillamos los datos de las bebidas del JSON
-        request.open('GET', this.state.rutaRestaurante + "bebidas", false);
-        request.onreadystatechange = function () {
-            if (this.readyState === 4) {
-              console.log("------------BEBIDAS------------");
-              console.log('Status:', this.status);
-              console.log('Headers:', this.getAllResponseHeaders());
-              console.log('Body:', this.responseText);
-            }
-        };
-        request.send();
+        let bebidasNew = await this.llamarAPI(this.state.rutaRestaurante + "bebidas");
+        this.setState({
+            bebidas: bebidasNew
+        })
 
     }
 
