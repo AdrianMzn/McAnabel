@@ -25,15 +25,20 @@
 }
 
 .imagenMenu:hover{
-    border-radius: 10%;
     opacity: 1; 
 }
 
 .producto{
-    height: 400px;
+    height: 350px;
     max-width: 400px;
-    background-color: aquamarine;
-    margin: 20px;
+    border: solid;
+    border-color: rgb(230, 230, 230);
+    border-width: 1px;
+    opacity: 0.7;
+}
+
+.producto:hover{
+    opacity: 1; 
 }
 
 .imagenProducto{

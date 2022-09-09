@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import "./CreaPedido.css"
+import imgLogo from'../images/imgReturn.jpg';
 
 export class CreaPedido extends Component {
 
@@ -14,6 +15,7 @@ export class CreaPedido extends Component {
             vinos: [],
             bebidas: [],
             productos: [],
+            actualState: "menu",
 
             rutaRestaurante: "http://localhost:3000/",
             rutaPedido: "https://private-anon-daf4fe63f9-pizzaapp.apiary-mock.com/orders/"
@@ -74,41 +76,51 @@ export class CreaPedido extends Component {
 
                 <div className="container center">
 
-                    <div className="row fila">
-                        <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
-                                <img className="imagenMenu" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnS4K5ReDNjSZsm64uQQ9v8AzZtCqssTc2SA&usqp=CAU' 
-                                    onClick={ (e) => this.mostrarProductos(e, this.state.pizzas)} alt="Pizzas" />
+                    { (this.state.actualState == "menu") &&
+                    <div>
+                        <div className="row fila">
+                            <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
+                                    <img className="imagenMenu" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnS4K5ReDNjSZsm64uQQ9v8AzZtCqssTc2SA&usqp=CAU' 
+                                        onClick={ (e) => {this.mostrarProductos(e, this.state.pizzas); this.state.actualState="productos"}} alt="Pizzas" />
+                            </div>
+                            <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
+                                <img className="imagenMenu" src="https://images.aws.nestle.recipes/resized/1828b2ea10adc8c9f710fcf959a55a51_PASTA-AL-ROMERO-Lunch_1200_600.png" 
+                                        onClick={ (e) => {this.mostrarProductos(e, this.state.pastas); this.state.actualState="productos"}} alt="Pastas" />
+                            </div>
                         </div>
-                        <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
-                            <img className="imagenMenu" src="https://images.aws.nestle.recipes/resized/1828b2ea10adc8c9f710fcf959a55a51_PASTA-AL-ROMERO-Lunch_1200_600.png" 
-                                    onClick={ (e) => this.mostrarProductos(e, this.state.pastas)} alt="Pastas" />
+                    
+                        <div className="row">
+                            <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
+                                <img className="imagenMenu" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bebidas-verano-portada-elle-1658494280.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*" 
+                                        onClick={ (e) => {this.mostrarProductos(e, this.state.bebidas); this.state.actualState="productos"}} alt="Bebidas" />
+                            </div>
+                            <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
+                                <img className="imagenMenu" src="https://images.hola.com/imagenes/cocina/escuela/200907079224/temperatura/vinos/enologia/0-876-296/temperatura-adobe-t.jpg?tx=w_568" 
+                                        onClick={ (e) => {this.mostrarProductos(e, this.state.vinos); this.state.actualState="productos"}} alt="Vinos" />
+                            </div>
                         </div>
-                    </div>
+                    </div>}
 
-                    <div className="row">
-                        <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
-                            <img className="imagenMenu" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bebidas-verano-portada-elle-1658494280.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*" 
-                                    onClick={ (e) => this.mostrarProductos(e, this.state.bebidas)} alt="Bebidas" />
-                        </div>
-                        <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
-                            <img className="imagenMenu" src="https://images.hola.com/imagenes/cocina/escuela/200907079224/temperatura/vinos/enologia/0-876-296/temperatura-adobe-t.jpg?tx=w_568" 
-                                    onClick={ (e) => this.mostrarProductos(e, this.state.vinos)} alt="Vinos" />
-                        </div>
-                    </div>
-
+                    { (this.state.actualState != "menu") &&
                     <div className="row">
                         <div className="row center">
+                                {
+                                    <div className="col-xs-4 col-md-4 col-lg-4 producto">
+                                        <img className="imagenProducto" src={imgLogo} 
+                                                onClick={ (e) => {this.mostrarProductos(e, this.state.vinos); this.state.actualState="menu"}} /><br />
+                                                Volver al menu
+                                    </div>
+                                }
                                 {this.state.productos.map((producto, index) => {
                                     return(
-                                        <div className="col-xs-3 col-md-3 col-lg-3 producto" key={index}> 
-                                            <br></br><br />
+                                        <div className="col-xs-4 col-md-4 col-lg-4 producto" key={index}>              
+                                            <img className="imagenProducto" src={producto.imagen}></img><br />
                                             {producto.nombre} 
-                                            <img className="imagenProducto" src={producto.imagen}></img>
                                         </div>
                                 )
                                 })}
                         </div>
-                    </div>
+                    </div> }
                 </div>
             </div>
         )
