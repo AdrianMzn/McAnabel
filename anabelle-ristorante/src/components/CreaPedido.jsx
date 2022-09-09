@@ -13,10 +13,14 @@ export class CreaPedido extends Component {
             pastas: [],
             vinos: [],
             bebidas: [],
+            productos: [],
+
             rutaRestaurante: "http://localhost:3000/",
             rutaPedido: "https://private-anon-daf4fe63f9-pizzaapp.apiary-mock.com/orders/"
         }
     }
+
+    
 
     render() {
         return (
@@ -71,29 +75,49 @@ export class CreaPedido extends Component {
                 <div className="container center">
 
                     <div className="row fila">
-                        <div className="col-md-6">
-                            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnS4K5ReDNjSZsm64uQQ9v8AzZtCqssTc2SA&usqp=CAU' alt="aa" />
+                        <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
+                                <img className="imagenMenu" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnS4K5ReDNjSZsm64uQQ9v8AzZtCqssTc2SA&usqp=CAU' 
+                                    onClick={ (e) => this.mostrarProductos(e, this.state.pizzas)} alt="Pizzas" />
                         </div>
-                        <div className="col-md-6">
-                            <img src="https://images.aws.nestle.recipes/resized/1828b2ea10adc8c9f710fcf959a55a51_PASTA-AL-ROMERO-Lunch_1200_600.png" alt="Pastas" />
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-md-6">
-                            <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bebidas-verano-portada-elle-1658494280.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*" alt="Bebidas" />
-                        </div>
-                        <div className="col-md-6">
-                            <img src="https://images.hola.com/imagenes/cocina/escuela/200907079224/temperatura/vinos/enologia/0-876-296/temperatura-adobe-t.jpg?tx=w_568" alt="Vinos" />
+                        <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
+                            <img className="imagenMenu" src="https://images.aws.nestle.recipes/resized/1828b2ea10adc8c9f710fcf959a55a51_PASTA-AL-ROMERO-Lunch_1200_600.png" 
+                                    onClick={ (e) => this.mostrarProductos(e, this.state.pastas)} alt="Pastas" />
                         </div>
                     </div>
 
                     <div className="row">
-                        Promociones
+                        <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
+                            <img className="imagenMenu" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bebidas-verano-portada-elle-1658494280.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*" 
+                                    onClick={ (e) => this.mostrarProductos(e, this.state.bebidas)} alt="Bebidas" />
+                        </div>
+                        <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
+                            <img className="imagenMenu" src="https://images.hola.com/imagenes/cocina/escuela/200907079224/temperatura/vinos/enologia/0-876-296/temperatura-adobe-t.jpg?tx=w_568" 
+                                    onClick={ (e) => this.mostrarProductos(e, this.state.vinos)} alt="Vinos" />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="row center">
+                                {this.state.productos.map((producto, index) => {
+                                    return(
+                                        <div className="col-xs-3 col-md-3 col-lg-3 producto" key={index}> 
+                                            <br></br><br />
+                                            {producto.nombre} 
+                                            <img className="imagenProducto" src={producto.imagen}></img>
+                                        </div>
+                                )
+                                })}
+                        </div>
                     </div>
                 </div>
             </div>
         )
+    }
+
+    mostrarProductos(event, newProductos){
+        event.preventDefault();
+        this.setState( {productos: newProductos} );
+        console.log(this.state.productos);
     }
 
     llamarAPI = async(URL) => {
