@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import "./CreaPedido.css"
+import ProgressBar from 'react-bootstrap/ProgressBar';
 //rce
 export class carritoActual extends Component {
 
@@ -12,6 +13,9 @@ export class carritoActual extends Component {
       rutaPedido: "https://private-anon-daf4fe63f9-pizzaapp.apiary-mock.com/orders/"
     }
   }
+
+  
+
 
   render() {
     return (
@@ -38,11 +42,73 @@ export class carritoActual extends Component {
               }     
           </div>
 
-          <div className="envio">
+          <div className="envio center">
                 <h1>Información de envio</h1>
+                <form>
+                <br />
+                  <input placeholder="Direccion de envio"/>  <br />  <br />
+                  <input placeholder="Número de teléfono"/>  <br />  <br />  
+                  <button type="button" className="btn btn-outline-success" onClick={ (e) => {this.realizarPedido(e) }}>Confirmar pedido</button>
+                </form>
+
+                <div className="center">
+
+                </div>
+                
+                
           </div>
       </div>
     )
+  }
+
+  realizarPedido(event){
+    event.preventDefault();
+
+    var request = new XMLHttpRequest();
+
+request.open('POST', 'https://private-anon-9b875335ce-pizzaapp.apiary-mock.com/orders/');
+
+request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    console.log('Status:', this.status);
+    console.log('Headers:', this.getAllResponseHeaders());
+    console.log('Body:', this.responseText);
+
+    //hacer la peticion, guardar el tiempo previsto y hacer el intervalo
+    //Poner debajo del boton la hora de envio, el tiempo estimado y el estado del pedido(gestionando, cocinando, entregando), con el set interval cambiaremos el estado
+    var refreshIntervalId = setInterval(() => {
+      console.log('Interval triggered');
+
+      /*  
+        si ya ha sido entregado
+
+              clearInterval(refreshIntervalId);
+      */
+              clearInterval(refreshIntervalId);
+    }, 1000); 
+  }
+};
+
+var body = "{ \
+    'cart': [ \
+      { \
+        'menuItemId': 2, \
+        'quantity': 1 \
+      }, \
+      { \
+        'menuItemId': 3, \
+        'quantity': 1 \
+      }, \
+      { \
+        'menuItemId': 6, \
+        'quantity': 2 \
+      } \
+    ], \
+    'restuarantId': 1 \
+  }";
+
+  request.send(body);
+  
   }
 
   getPrecioTotal(){

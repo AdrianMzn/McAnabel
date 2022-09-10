@@ -38,54 +38,6 @@ export class CreaPedido extends Component {
                 
             <div className="row">
             <h1 >Crea tu propio menú</h1>
-                
-                {/*}
-                <div className="container">
-                    <h1>PRODUCTOS</h1>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Tipo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.state.pizzas.map( (pizza) => {
-                                return ( 
-                                    <tr key={pizza.nombre}>
-                                        <td>{pizza.nombre}</td>
-                                        <td>Pizza</td>
-                                    </tr>
-                                )
-                            })}
-                            {this.state.bebidas.map( (bebida) => {
-                                return ( 
-                                    <tr key={bebida.nombre}>
-                                        <td>{bebida.nombre}</td>
-                                        <td>Bebida</td>
-                                    </tr>
-                                )
-                            })}
-                            {this.state.vinos.map( (vino) => {
-                                return ( 
-                                    <tr key={vino.nombre}>
-                                        <td>{vino.nombre}</td>
-                                        <td>Vino</td>
-                                    </tr>
-                                )
-                            })}
-                            {this.state.pastas.map( (pasta) => {
-                                return ( 
-                                    <tr key={pasta.nombre}>
-                                        <td>{pasta.nombre}</td>
-                                        <td>Pasta</td>
-                                    </tr>
-                                )
-                            })}
-                        </tbody>
-                    </table>
-                    
-                        </div> */}
 
                 <div className="container col-xs-8 col-md-8 col-lg-8 center ">
 

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
   }
 
 
@@ -12,6 +13,7 @@
     text-align: center;
     position:relative;
     display:block;
+    
 }
 
 h1 {
@@ -23,6 +25,12 @@ h1 {
      line-height: 44px; 
      text-align: center; 
      margin: 0 0 12px;
+}
+
+input{
+    border: 1px solid black;
+    margin: 20px;
+    min-width: 250px;
 }
 
 .imagenMenu{
@@ -88,6 +96,8 @@ h1 {
 
 .envio{
     margin-top: 60px;
+    height: 500px;
+    font-style: italic;
 }
 
 .precioTotal{
