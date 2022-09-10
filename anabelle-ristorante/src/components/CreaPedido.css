@@ -79,7 +79,20 @@ h1 {
     border-width: 1px;
     opacity: 0.7;
     flex-direction: row;
-    font-size: 14px;
+    font-size: 12px;
+}
+
+.carrito{
+    margin-top: 100px;
+}
+
+.envio{
+    margin-top: 60px;
+}
+
+.precioTotal{
+    margin-top:10px;
+    font-style: italic;
 }
 
 .botonAumentarCantidad{

@@ -16,25 +16,42 @@ export class carritoActual extends Component {
   render() {
     return (
       <div>
-        <h1>Menú actual</h1>
-        <br />
-          {this.state.productos.map((producto, index) => {
-              if( this.state.cantidad[index] > 0)
-              return(
-                    
-                    <div className="productoCarrito" key={index}>
+          <div className="carrito">
+              <h1>Menú actual</h1>
+              {this.state.productos.map((producto, index) => {
+                  if( this.state.cantidad[index] > 0)
+                  return(
+                        
+                        <div className="productoCarrito" key={index}>
 
-                          <img className="imagenCarrito" src={producto.imagen} alt="producto.imagen no encontrada"></img>
-                          {producto.nombre} - {producto.precio} € - {this.state.cantidad[index]} unds
-                          <button className="botonAumentarCantidad" onClick={ (e) => { this.setCantidad(e,index,1) } }>+</button>
-                          <button className="botonDisminuirCantidad" onClick={ (e) => { this.setCantidad(e,index,-1) } }>-</button>
-                                
-                    </ div>
-              )
-              return(<div></div>)
-          })}
+                              <img className="imagenCarrito" src={producto.imagen} alt="producto.imagen no encontrada"></img>
+                              {producto.nombre} - {producto.precio} € - {this.state.cantidad[index]} unds
+                              <button className="botonAumentarCantidad" onClick={ (e) => { this.setCantidad(e,index,1) } }>+</button>
+                              <button className="botonDisminuirCantidad" onClick={ (e) => { this.setCantidad(e,index,-1) } }>-</button>
+                                    
+                        </ div>
+                  )
+                  return(<div></div>)
+              })}    
+              { (this.state.productos.length > 0) && 
+                      <div className="center precioTotal"> <br></br>Coste total: {this.getPrecioTotal()} €</div>   
+              }     
+          </div>
+
+          <div className="envio">
+                <h1>Información de envio</h1>
+          </div>
       </div>
     )
+  }
+
+  getPrecioTotal(){
+      let total = 0;
+
+      for (let index = 0; index < this.state.cantidad.length; index++) {
+        total += this.state.cantidad[index] * this.state.productos[index].precio;
+      }
+      return total.toFixed(2);
   }
 
   setCantidad(event, index, cantidad){
@@ -71,7 +88,7 @@ export class carritoActual extends Component {
       );
     }
     else{
-      
+
       this.state.productos.push(producto);
 
       let cantidadNew = this.state.cantidad;
