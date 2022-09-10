@@ -27,6 +27,12 @@ export class CreaPedido extends Component {
     render() {
         return (
             <div>
+                <br /><br />
+                
+            <div className="row">
+            <h1 >Crea tu propio menu</h1>
+                
+                {/*}
                 <div className="container">
                     <h1>PRODUCTOS</h1>
                     <table>
@@ -72,16 +78,16 @@ export class CreaPedido extends Component {
                         </tbody>
                     </table>
                     
-                </div>
+                        </div> */}
 
-                <div className="container center">
+                <div className="container col-xs-8 col-md-8 col-lg-8 center ">
 
-                    { (this.state.actualState == "menu") &&
+                    { (this.state.actualState === "menu") &&
                     <div>
-                        <div className="row fila">
+                        <div className="row">
                             <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
                                     <img className="imagenMenu" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnS4K5ReDNjSZsm64uQQ9v8AzZtCqssTc2SA&usqp=CAU' 
-                                        onClick={ (e) => {this.mostrarProductos(e, this.state.pizzas); this.state.actualState="productos"}} alt="Pizzas" />
+                                        onClick={ (e) => {this.mostrarProductos(e, this.state.pizzas); this.setState( {actualState: "productos" })}} alt="Pizzas" />
                             </div>
                             <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
                                 <img className="imagenMenu" src="https://images.aws.nestle.recipes/resized/1828b2ea10adc8c9f710fcf959a55a51_PASTA-AL-ROMERO-Lunch_1200_600.png" 
@@ -102,7 +108,7 @@ export class CreaPedido extends Component {
                     </div>}
 
                     { (this.state.actualState != "menu") &&
-                    <div className="row">
+                    <div className="divProductos">
                         <div className="row center">
                                 {
                                     <div className="col-xs-4 col-md-4 col-lg-4 producto">
@@ -115,13 +121,18 @@ export class CreaPedido extends Component {
                                     return(
                                         <div className="col-xs-4 col-md-4 col-lg-4 producto" key={index}>              
                                             <img className="imagenProducto" src={producto.imagen}></img><br />
-                                            {producto.nombre} 
+                                            {producto.nombre} - {producto.precio} €
                                         </div>
                                 )
                                 })}
                         </div>
                     </div> }
                 </div>
+
+                <div className="container col-xs-4 col-md-4 col-lg-4 ">
+                        <h1>Menu actual</h1>
+                </div>
+            </div>
             </div>
         )
     }
