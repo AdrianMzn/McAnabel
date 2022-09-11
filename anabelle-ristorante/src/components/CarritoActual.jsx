@@ -1,6 +1,7 @@
+import { now } from 'jquery';
 import React, { Component } from 'react'
 import "./CreaPedido.css"
-import ProgressBar from 'react-bootstrap/ProgressBar';
+import Progressbar from './Progress_bar';
 //rce
 export class carritoActual extends Component {
 
@@ -10,6 +11,11 @@ export class carritoActual extends Component {
     this.state = {
       productos: [],
       cantidad: [],
+      progress: 0,
+      horaPedido: now,
+      horaEntrega: now,
+      realizandoEnvio: false,
+      estadoPedido: "Gestionando...",
       rutaPedido: "https://private-anon-daf4fe63f9-pizzaapp.apiary-mock.com/orders/"
     }
   }
@@ -42,21 +48,27 @@ export class carritoActual extends Component {
               }     
           </div>
 
-          <div className="envio center">
+          <div className="envioInfo center">
                 <h1>Información de envio</h1>
                 <form>
                 <br />
                   <input placeholder="Direccion de envio"/>  <br />  <br />
                   <input placeholder="Número de teléfono"/>  <br />  <br />  
                   <button type="button" className="btn btn-outline-success" onClick={ (e) => {this.realizarPedido(e) }}>Confirmar pedido</button>
-                </form>
+                </form>  
+          </div>
+
+          { this.state.realizandoEnvio === true && 
+          <div className="envioEstado center">
+                <h1>Estado del envio</h1>
 
                 <div className="center">
-
-                </div>
-                
-                
-          </div>
+                     Hora del pedido: {this.state.horaPedido} <br />
+                     Hora prevista de entrega: {this.state.horaEntrega} <br />
+                     Estado: {this.state.estadoPedido} <br /> 
+                    <Progressbar bgcolor="orange" progress={this.state.progress}  height={30} />
+                </div>    
+          </div>}
       </div>
     )
   }
@@ -64,50 +76,76 @@ export class carritoActual extends Component {
   realizarPedido(event){
     event.preventDefault();
 
-    var request = new XMLHttpRequest();
+    if( this.state.realizandoEnvio === false){
+      this.setState({ realizandoEnvio: true });
 
-request.open('POST', 'https://private-anon-9b875335ce-pizzaapp.apiary-mock.com/orders/');
+      var request = new XMLHttpRequest();
+  
+      request.open('POST', 'https://private-anon-9b875335ce-pizzaapp.apiary-mock.com/orders/');
+  
+      request.onreadystatechange = () => {
+        if (request.readyState === 4) {
+            console.log('Body:', request.responseText);
+  
+            let data = JSON.parse(request.responseText);
+            let newHoraPedido = data.orderedAt.split("T")[1].substring(0, 5);
+            let newHoraEntrega = data.esitmatedDelivery.split("T")[1].substring(0, 5);
+            this.setState({
+              horaPedido: newHoraPedido,
+              horaEntrega: newHoraEntrega,
+            })
+  
+            console.log("Num: " + newHoraPedido.substring(3, 5))
+            let minutosCoste = Math.abs( ( parseInt(newHoraPedido.substring(0, 2), 10) - parseInt(newHoraEntrega.substring(0, 2), 10) ) * 60 +
+                                      (parseInt(newHoraPedido.substring(3, 5), 10) - parseInt(newHoraEntrega.substring(3, 5), 10) ));
+            let aumentoXsegundo = 100/(minutosCoste*60);
+  
+            const randFinGestion = 1 + Math.random() * (4 - 1);
+            const randFinCocinar = randFinGestion + Math.random() * (60 - randFinGestion);
+            let newProgress = this.state.progress;
+            var refreshIntervalId = setInterval(() => {
+  
+                newProgress = newProgress + aumentoXsegundo;
+                this.setState({ progress: Number(newProgress).toFixed(2) })
+  
+                if( this.state.progress >= randFinCocinar ){
+                    this.setState({ estadoPedido: "Entregando..." })
+                }
+                else if(this.state.progress >= randFinGestion){
+                  this.setState({ estadoPedido: "Preparando..." })
+                }
+  
+                if( this.state.progress >= 99){
+                      this.setState({ realizandoEnvio: false })
+                      clearInterval(refreshIntervalId);
+                }
+              
+            }, 1000); 
+        }
+      };
+  
+      var body = "{ \
+        'cart': [ \
+          { \
+            'menuItemId': 2, \
+            'quantity': 1 \
+          }, \
+          { \
+            'menuItemId': 3, \
+            'quantity': 1 \
+          }, \
+          { \
+            'menuItemId': 6, \
+            'quantity': 2 \
+          } \
+        ], \
+        'restuarantId': 1 \
+      }";
+  
+      request.send(body);
+    }
 
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-
-    //hacer la peticion, guardar el tiempo previsto y hacer el intervalo
-    //Poner debajo del boton la hora de envio, el tiempo estimado y el estado del pedido(gestionando, cocinando, entregando), con el set interval cambiaremos el estado
-    var refreshIntervalId = setInterval(() => {
-      console.log('Interval triggered');
-
-      /*  
-        si ya ha sido entregado
-
-              clearInterval(refreshIntervalId);
-      */
-              clearInterval(refreshIntervalId);
-    }, 1000); 
-  }
-};
-
-var body = "{ \
-    'cart': [ \
-      { \
-        'menuItemId': 2, \
-        'quantity': 1 \
-      }, \
-      { \
-        'menuItemId': 3, \
-        'quantity': 1 \
-      }, \
-      { \
-        'menuItemId': 6, \
-        'quantity': 2 \
-      } \
-    ], \
-    'restuarantId': 1 \
-  }";
-
-  request.send(body);
+    
   
   }
 

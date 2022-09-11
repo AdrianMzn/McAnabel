@@ -94,9 +94,14 @@ input{
     margin-top: 100px;
 }
 
-.envio{
+.envioInfo{
     margin-top: 60px;
-    height: 500px;
+    font-style: italic;
+}
+
+.envioEstado{
+    margin-top: 60px;
+    height: 300px;
     font-style: italic;
 }
 

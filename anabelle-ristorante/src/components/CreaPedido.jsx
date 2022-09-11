@@ -41,7 +41,7 @@ export class CreaPedido extends Component {
 
                 <div className="container col-xs-8 col-md-8 col-lg-8 center ">
 
-                    { (this.state.actualState === "menu") &&
+                    { (this.state.actualState === "menu" ) &&
                     <div>
                         <div className="row">
                             <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
@@ -66,7 +66,7 @@ export class CreaPedido extends Component {
                         </div>
                     </div>}
 
-                    { (this.state.actualState !== "menu") &&
+                    { (this.state.actualState !== "menu" ) &&
                     <div className="divProductos">
                         <div className="row center">
                                 {
@@ -134,43 +134,6 @@ export class CreaPedido extends Component {
         })
 
     }
-
-    realizarPedido(){
-
-        var request = new XMLHttpRequest();
-
-        request.open('POST', 'https://private-anon-daf4fe63f9-pizzaapp.apiary-mock.com/orders/');
-
-        request.onreadystatechange = function () {
-        if (this.readyState === 4) {
-            console.log('Status:', this.status);
-            console.log('Headers:', this.getAllResponseHeaders());
-            console.log('Body:', this.responseText);
-        }
-        };
-
-        var body = "{ \
-        'cart': [ \
-            { \
-            'menuItemId': 2, \
-            'quantity': 1 \
-            }, \
-            { \
-            'menuItemId': 3, \
-            'quantity': 1 \
-            }, \
-            { \
-            'menuItemId': 6, \
-            'quantity': 2 \
-            } \
-        ], \
-        'restuarantId': 1 \
-        }";
-
-        request.send(body);
-    }
-
-
 
 }
 
