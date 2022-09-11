@@ -183,26 +183,29 @@ export class carritoActual extends Component {
   }
 
   addProducto(producto){
-    let index = this.state.productos.indexOf(producto);
-    if(index > -1){
-      let cantidadNew = this.state.cantidad;
-      cantidadNew[index]+=1;
-      this.setState( 
-        { cantidad: cantidadNew }
-      );
+
+    if( this.state.realizandoEnvio === false){
+        let index = this.state.productos.indexOf(producto);
+        if(index > -1){
+          let cantidadNew = this.state.cantidad;
+          cantidadNew[index]+=1;
+          this.setState( 
+            { cantidad: cantidadNew }
+          );
+        }
+        else{
+
+          this.state.productos.push(producto);
+
+          let cantidadNew = this.state.cantidad;
+          cantidadNew[cantidadNew.length] = 1;
+          this.setState( 
+            { cantidad: cantidadNew }
+          );
+        }
+
+        
     }
-    else{
-
-      this.state.productos.push(producto);
-
-      let cantidadNew = this.state.cantidad;
-      cantidadNew[cantidadNew.length] = 1;
-      this.setState( 
-        { cantidad: cantidadNew }
-      );
-    }
-
-    
   }
 }
 
