@@ -27,11 +27,26 @@ h1 {
      margin: 0 0 12px;
 }
 
-input{
-    border: 1px solid black;
-    margin: 20px;
-    min-width: 250px;
+.inputCreaPedido{
+    border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 2px 2px 3px #666;
+	-webkit-box-shadow: 2px 2px 3px #666;
+	box-shadow: 2px 2px 3px #666;
+	font-size: 18px;
+    font-style: italic; 
+	padding: 4px 7px;
+	outline: 0;
+	-webkit-appearance: none;
+    min-width: 260px;
 }
+
+.inputCreaPedido:focus{
+    border-color: #b48608; 
+}
+
 
 .imagenMenu{
     width: 450px;

@@ -52,8 +52,8 @@ export class carritoActual extends Component {
                 <h1>Información de envio</h1>
                 <form>
                 <br />
-                  <input placeholder="Direccion de envio"/>  <br />  <br />
-                  <input placeholder="Número de teléfono"/>  <br />  <br />  
+                  <input className="inputCreaPedido" placeholder="Direccion de envio"/>  <br />  <br /> 
+                  <input className="inputCreaPedido" placeholder="Número de teléfono"/>  <br />  <br />  <br /> 
                   <button type="button" className="btn btn-outline-success" onClick={ (e) => {this.realizarPedido(e) }}>Confirmar pedido</button>
                 </form>  
           </div>
