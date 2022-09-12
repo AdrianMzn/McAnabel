@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Error from './components/Error';
 import CreaPedido from './components/CreaPedido';
 import Contacto from './components/Contacto';
-import SobreNosotros from './components/SobreNosotros/SobreNosotros';
+import SobreNosotros from './components/SobreNosotros';
 
 
 function App() {
@@ -22,7 +22,6 @@ function App() {
               <Route exact path="/sobreNosotros" element={<SobreNosotros />} />
               <Route path="*" element={<Error />} />
             </Routes>
-
             
         </div>
       

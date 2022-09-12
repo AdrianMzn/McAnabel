@@ -27,7 +27,7 @@ h1 {
      margin: 0 0 12px;
 }
 
-.inputCreaPedido{
+input{
     border: 1px solid black;
     margin: 20px;
     min-width: 250px;
