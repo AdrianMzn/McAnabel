@@ -1,0 +1,59 @@
+/* Reiniciamos el margin y el padding */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    padding: 1%;
+    background-color: white;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("https://images4.alphacoders.com/276/276908.jpg"); 
+    /* Hacemos translúcida la imagen */
+    background-color: rgba(250, 250, 250, 0.5);
+    background-blend-mode: lighten;
+    /* Ajustamos la imagen al tamaño de la pantalla */
+    background-size: cover;
+}
+
+main{
+    /* Ponemos el h2 en un tamaño más estrecho */
+    width: 80%;
+    /* Alineamos el h1 y el h2 al centro de la pantalla */
+    margin: 0 auto;
+
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    color: black;
+    /* Ponemos la letra en negrita */
+    font-weight: bold;
+    font-size: 75px;
+    text-align: center;
+}
+
+h2{
+    color: black;
+    text-align: center;
+    margin-top: 3%;
+}
+
+footer{
+    /* Ajustamos el footer justo al final del tamaño de nuestra pantalla */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    padding: 2%;
+    background-color: #a1a1a1;
+}
+
