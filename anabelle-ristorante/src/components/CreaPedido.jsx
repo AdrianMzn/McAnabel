@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import "./CreaPedido.css"
-import imgReturn from'../images/imgReturn.jpg';
+import imgReturn from'../images/imgReturn.png';
 import CarritoActual from './CarritoActual';
-
+import background from "../images/fondoCreaMenu.jpg";
 
 export class CreaPedido extends Component {
 
@@ -33,7 +33,10 @@ export class CreaPedido extends Component {
     
     render() {
         return (
-            <div>
+            <div style={{ backgroundImage: `url(${background})` , backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed',
+            backgroundSize: 'cover'}}>
                 <br /><br />
                 
             <div className="row">
@@ -73,7 +76,7 @@ export class CreaPedido extends Component {
                                     <div className="col-xs-4 col-md-4 col-lg-4 producto">
                                         <img className="imagenProducto" src={imgReturn} alt="imgReturn no encontrada"
                                                 onClick={ (e) => {this.mostrarProductos(e, []); this.setState( {actualState: "menu" })}} /><br />
-                                                Volver al menu
+                                                <h4>Volver al menu</h4>
                                     </div>
                                 }
                                 {this.state.productos.map((producto, index) => {
@@ -81,7 +84,7 @@ export class CreaPedido extends Component {
                                         <div className="col-xs-4 col-md-4 col-lg-4 producto" key={index} 
                                                     onClick={ (e) => this.addProductoCarrito(e,producto) }>              
                                             <img className="imagenProducto" src={producto.imagen} alt="producto.imagen no encontrada"></img><br />
-                                            {producto.nombre} - {producto.precio} €
+                                            <h4>{producto.nombre} - {producto.precio} €</h4>
                                         </div>
                                 )
                                 })}
