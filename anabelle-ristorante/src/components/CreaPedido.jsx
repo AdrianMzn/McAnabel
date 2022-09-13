@@ -3,6 +3,7 @@ import "./CreaPedido.css"
 import imgReturn from'../images/imgReturn.jpg';
 import CarritoActual from './CarritoActual';
 
+
 export class CreaPedido extends Component {
 
     
@@ -30,7 +31,6 @@ export class CreaPedido extends Component {
         this.setState( {carritoActual: this.state.carritoActual} );
     }
     
-
     render() {
         return (
             <div>

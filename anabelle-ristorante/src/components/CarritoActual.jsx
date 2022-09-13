@@ -2,6 +2,8 @@ import { now } from 'jquery';
 import React, { Component } from 'react'
 import "./CreaPedido.css"
 import Progressbar from './Progress_bar';
+import {NotificationManager, NotificationContainer} from 'react-notifications'
+import 'react-notifications/lib/notifications.css'
 //rce
 export class carritoActual extends Component {
 
@@ -21,7 +23,13 @@ export class carritoActual extends Component {
   }
 
   
-
+  lanzarNotificacion = () => {
+    let timeout = 2000;
+    let prioridad = true;
+                NotificationManager.info("Notificacion info, para mas detalle pulsa aqui", "Titulo", timeout, () => {
+                    alert("Ejecutandose funcion callback \n Informacion ampliada")
+                }, prioridad);
+  }
 
   render() {
     return (
@@ -54,7 +62,10 @@ export class carritoActual extends Component {
                 <br />
                   <input className="inputCreaPedido" placeholder="Direccion de envio"/>  <br />  <br /> 
                   <input className="inputCreaPedido" placeholder="Número de teléfono"/>  <br />  <br />  <br /> 
-                  <button type="button" className="btn btn-outline-success" onClick={ (e) => {this.realizarPedido(e) }}>Confirmar pedido</button>
+                  <button type="button" className="btn btn-outline-success" onClick={ (e) => {this.lanzarNotificacion() ;this.realizarPedido(e);  }}>Confirmar pedido</button>
+                  <div>
+                    <NotificationContainer />
+                  </div>
                 </form>  
           </div>
 
@@ -78,9 +89,7 @@ export class carritoActual extends Component {
 
     if( this.state.realizandoEnvio === false){
       this.setState({ realizandoEnvio: true });
-
       var request = new XMLHttpRequest();
-  
       request.open('POST', 'https://private-anon-9b875335ce-pizzaapp.apiary-mock.com/orders/');
   
       request.onreadystatechange = () => {
