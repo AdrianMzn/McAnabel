@@ -4,12 +4,7 @@
     padding: 0;
 }
 
-header{
-    padding: 1%;
-    background-color: white;
-}
-
-body{
+#cuerpo{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: url("https://images4.alphacoders.com/276/276908.jpg"); 
     /* Hacemos translúcida la imagen */
@@ -17,9 +12,7 @@ body{
     background-blend-mode: lighten;
     /* Ajustamos la imagen al tamaño de la pantalla */
     background-size: cover;
-}
 
-main{
     /* Ponemos el h2 en un tamaño más estrecho */
     width: 80%;
     /* Alineamos el h1 y el h2 al centro de la pantalla */
@@ -31,7 +24,7 @@ main{
     transform: translate(-50%, -50%);
 }
 
-h1{
+#titulo1{
     color: black;
     /* Ponemos la letra en negrita */
     font-weight: bold;
@@ -39,14 +32,14 @@ h1{
     text-align: center;
 }
 
-h2{
+#titulo2{
     color: black;
     text-align: center;
     margin-top: 3%;
 }
 
-footer{
-    /* Ajustamos el footer justo al final del tamaño de nuestra pantalla */
+/* footer{
+    /* Ajustamos el footer justo al final del tamaño de nuestra pantalla 
     position: fixed;
     bottom: 0;
     left: 0;
@@ -55,5 +48,5 @@ footer{
     text-align: center;
     padding: 2%;
     background-color: #a1a1a1;
-}
+} */
 
