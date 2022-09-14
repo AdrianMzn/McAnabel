@@ -27,6 +27,17 @@ h1 {
      margin: 0 0 12px;
 }
 
+.titulo {
+    color: #b48608; 
+     font-family: 'Droid serif', serif; 
+     font-size: 80px; 
+     font-weight: 400; 
+     font-style: italic; 
+     line-height: 44px; 
+     text-align: center; 
+     margin: 0 0 12px;
+}
+
 .inputCreaPedido{
     border: 1px solid #ccc;
 	-moz-border-radius: 10px;
@@ -120,6 +131,10 @@ h1 {
 
 .row{
     --bs-gutter-x: 0 !important;
+}
+
+.divCreaPedido{
+    min-height: 1050px;
 }
 
 .envioEstado{

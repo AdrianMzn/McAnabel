@@ -39,10 +39,12 @@ export class CreaPedido extends Component {
             backgroundSize: 'cover'}}>
                 <br /><br />
                 
-            <div className="row">
-            <h1 >Crea tu propio menú</h1>
+            <div className="row divCreaPedido">
+            <h1 className="titulo" >Crea tu propio menú</h1>
 
-                <div className="container col-xs-8 col-md-8 col-lg-8 center ">
+                <div className="container col-xs-1 col-md-1 col-lg-1 center ">
+                </div>
+                <div className="container col-xs-7 col-md-7 col-lg-7 center ">
 
                     { (this.state.actualState === "menu" ) &&
                     <div>
