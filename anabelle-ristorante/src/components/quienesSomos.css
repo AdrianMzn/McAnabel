@@ -12,16 +12,10 @@
     background-blend-mode: lighten;
     /* Ajustamos la imagen al tamaño de la pantalla */
     background-size: cover;
+    /* Ajustamos la imagen al tamaño completo de la pantalla */
+    height: 92vh;
 
-    /* Ponemos el h2 en un tamaño más estrecho */
-    width: 80%;
-    /* Alineamos el h1 y el h2 al centro de la pantalla */
-    margin: 0 auto;
 
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 #titulo1{
@@ -36,6 +30,9 @@
     color: black;
     text-align: center;
     margin-top: 3%;
+    margin-left: 9%;
+    margin-right: 11%;
+    
 }
 
 /* footer{
