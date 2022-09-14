@@ -118,6 +118,10 @@ h1 {
     font-style: italic;
 }
 
+.row{
+    --bs-gutter-x: 0 !important;
+}
+
 .envioEstado{
     font-family: "Poppins", Arial, sans-serif;
     color: gray;
