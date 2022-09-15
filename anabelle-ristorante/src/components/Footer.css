@@ -1,0 +1,37 @@
+.nombre{
+    
+     font-family: "Century Gothic";
+     font-size: 15px;
+     color: white;
+     margin: 0px;
+     padding: 10px;
+     display : flex;
+     justify-content: center;
+     align-items: center;
+} 
+.copyright{
+    
+     font-family: "Century Gothic";
+     font-size: 15px;
+     color: white;
+     margin: 0px;
+     padding: 10px;
+     display : flex;
+     justify-content: center;
+     align-items: center;
+} 
+.policy{
+    
+     font-family: "Century Gothic";
+     text-decoration: underline;
+     font-size: 15px;
+     color: white;
+     margin: 0px;
+     padding: 12px;
+     padding-bottom: 20 px;
+     display : flex;
+     justify-content: center;
+     align-items: center;
+     column-count: 4;
+     column-gap: 20px;
+} 
