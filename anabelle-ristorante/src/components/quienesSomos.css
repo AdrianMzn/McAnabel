@@ -10,6 +10,20 @@
     /* Hacemos translúcida la imagen */
     background-color: rgba(250, 250, 250, 0.5);
     background-blend-mode: lighten;
+    /* La imagen tiene que cubrir toda la pantalla */
+    background-size: cover;
+    /* La imagen no se repite */
+    background-repeat: no-repeat;
+    /* La imagen está fija en la posición de la pantalla */
+    background-attachment: fixed;
+    /* Centramos la imagen */
+    background-position: center;
+    /* Hacemos que el contenido de la página no se pueda seleccionar */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
     /* Ajustamos la imagen al tamaño de la pantalla */
     background-size: cover;
     /* Ajustamos la imagen al tamaño completo de la pantalla */
@@ -24,10 +38,14 @@
     font-weight: bold;
     font-size: 75px;
     text-align: center;
-    margin-top: 50px;
+    padding-top: 4%;
 }
 
 #titulo2{
+    /* Ponemos una letra de estilo italiana */
+    font-family: 'Italiana', cursive;
+    /* Ponemos en kursiva las letras */
+    font-style: italic;
     color: black;
     text-align: center;
     margin-top: 3%;
@@ -41,7 +59,7 @@
 }
 
 /* footer{
-    /* Ajustamos el footer justo al final del tamaño de nuestra pantalla 
+    /* Ajustamos el footer justo al final del tamaño de nuestra pantalla
     position: fixed;
     bottom: 0;
     left: 0;
