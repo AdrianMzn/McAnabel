@@ -5,7 +5,7 @@ export class SobreNosotros extends Component {
   render() {
     return (
       <div id = "cuerpo">
-        Sobre nosotros
+        {/* Sobre nosotros */}
           <h1 id = "titulo1">¿Quiénes somos?</h1>
           <h2 id = "titulo2">
             Somos un restaurante de comida italiana, con más de 20 años de experiencia en el sector.
