@@ -16,12 +16,17 @@ export class SobreNosotros extends Component {
 
           {/* Video */}
           <div id = "video">
-            <ReactPlayer>
-              url = "https://youtu.be/jjloL1COohY"
-              controls = {true}
-              {/* Ponemos en bucle el video */}
-              loop = {true}
-            </ReactPlayer>
+            <ReactPlayer
+              url = 'https://youtu.be/jjloL1COohY'
+              // Autoplay
+              loop
+              // Ajustamos el volumen
+              volume={0.3}
+              // Para no darle al play
+              playing
+              // Ajustamos el video al centro de la pantalla
+              style={{margin: 'auto'}}
+            />
           </div>
       </div>
 

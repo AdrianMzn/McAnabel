@@ -24,6 +24,7 @@
     font-weight: bold;
     font-size: 75px;
     text-align: center;
+    margin-top: 50px;
 }
 
 #titulo2{
@@ -33,6 +34,10 @@
     margin-left: 9%;
     margin-right: 11%;
     
+}
+
+#video{
+    margin-top: 3%;
 }
 
 /* footer{
