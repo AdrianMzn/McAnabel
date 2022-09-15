@@ -122,8 +122,23 @@ export class CreaPedido extends Component {
                     <div className="container col-xs-4 col-md-4 col-lg-4 ">
                         <CarritoActual ref={this.carritoActual} />
                     </div>
+                    
                 </div>
 
+                
+                
+                <br />
+                <br />
+
+                <div className='row center' style={{ marginBottom: '50px', marginTop:'50px'}} >
+                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
+                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '80%'}}/>
+                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
+                </div>
+
+                <br />
+
+                
                
                 
             </div>
