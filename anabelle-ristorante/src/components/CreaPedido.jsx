@@ -44,19 +44,6 @@ export class CreaPedido extends Component {
                 <br /><br />
                    
 
-                <div className="divPromociones center">
-                        <h1 className="titulo" >Promociones</h1>
-
-                        <img  src={menuPromociones} alt="Promociones"
-                            style={{ height: '30%', width: '70%', marginTop: '70px'}} />
-                </div>
-
-                <div className='row center' style={{ marginBottom: '50px', marginTop:'50px'}} >
-                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
-                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '80%'}}/>
-                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
-                </div>
-
                 <div className="row divCreaPedido">
                     <h1 className="titulo" >Crea tu propio menú</h1>
 
@@ -67,29 +54,29 @@ export class CreaPedido extends Component {
                         { (this.state.actualState === "menu" ) &&
                         <div>
                             <div className="row">
-                                <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
+                                <div className="col-xs-12 col-md-6 col-lg-6 divMenu">
                                         <img className="imagenMenu" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnS4K5ReDNjSZsm64uQQ9v8AzZtCqssTc2SA&usqp=CAU' 
                                             onClick={ (e) => {this.mostrarProductos(e, this.state.pizzas); this.setState( {actualState: "productos" })}} alt="Pizzas" />
                                 </div>
-                                <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
+                                <div className="col-xs-12 col-md-6 col-lg-6 divMenu">
                                     <img className="imagenMenu" src="https://images.aws.nestle.recipes/resized/1828b2ea10adc8c9f710fcf959a55a51_PASTA-AL-ROMERO-Lunch_1200_600.png" 
                                             onClick={ (e) => {this.mostrarProductos(e, this.state.pastas); this.setState( {actualState: "productos" })}} alt="Pastas" />
                                 </div>
                             </div>
                         
                             <div className="row">
-                                <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
+                                <div className="col-xs-12 col-md-6 col-lg-6 divMenu">
                                     <img className="imagenMenu" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bebidas-verano-portada-elle-1658494280.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*" 
                                             onClick={ (e) => {this.mostrarProductos(e, this.state.bebidas); this.setState( {actualState: "productos" })}} alt="Bebidas" />
                                 </div>
-                                <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
+                                <div className="col-xs-12 col-md-6 col-lg-6 divMenu">
                                     <img className="imagenMenu" src="https://images.hola.com/imagenes/cocina/escuela/200907079224/temperatura/vinos/enologia/0-876-296/temperatura-adobe-t.jpg?tx=w_568" 
                                             onClick={ (e) => {this.mostrarProductos(e, this.state.vinos); this.setState( {actualState: "productos" })}} alt="Vinos" />
                                 </div>
                             </div>
 
                             <div className="row">
-                                <div className="col-xs-12 col-md-12 col-lg-12 divMenu">
+                                <div className="divMenu">
                                     <img className="imagenMenu" src={imgPromociones} 
                                             onClick={ (e) => {this.mostrarProductos(e, this.state.promociones); this.setState( {actualState: "promociones" })}} alt="Promociones" />
                                 </div>
@@ -125,6 +112,22 @@ export class CreaPedido extends Component {
                     
                 </div>
 
+
+                <div className='row center' style={{ marginBottom: '50px', marginTop:'50px'}} >
+                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
+                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '80%'}}/>
+                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
+                </div>
+                
+
+                <div className="divPromociones center">
+                        <h1 className="titulo" >Promociones</h1>
+
+                        <img  src={menuPromociones} alt="Promociones"
+                            style={{ height: '20%', width: '60%', marginTop: '70px'}} />
+                </div>
+
+                
                 
                 
                 <br />
