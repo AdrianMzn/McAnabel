@@ -101,6 +101,8 @@ export class CreaPedido extends Component {
 
                 <div className='row center' style={{ marginBottom: '50px', marginTop:'50px'}} >
                         <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
+                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '80%'}}/>
+                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
                 </div>
                 
 
