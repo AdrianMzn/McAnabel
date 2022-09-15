@@ -7,12 +7,15 @@ import Error from './components/Error';
 import CreaPedido from './components/CreaPedido';
 import Contacto from './components/Contacto';
 import SobreNosotros from './components/SobreNosotros';
+import ScrollToTop from "react-scroll-to-top";
 
 
 function App() {
   return (
     <Router>
         <div>
+            <ScrollToTop smooth color="#000" />
+
             <Navbar />
 
             <Routes>
