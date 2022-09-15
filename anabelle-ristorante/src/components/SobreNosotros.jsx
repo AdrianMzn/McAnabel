@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactPlayer from 'react-player'
 import "./quienesSomos.css"
 
 export class SobreNosotros extends Component {
@@ -12,6 +13,15 @@ export class SobreNosotros extends Component {
             Nuestro objetivo es ofrecer a nuestros clientes una experiencia gastronómica única,
             con productos de primera calidad y un servicio de atención al cliente de primera.
           </h2>
+
+          {/* Video */}
+          <div id = "video">
+            <ReactPlayer>
+              url = "https://youtu.be/jjloL1COohY"
+              {/* Ponemos en bucle el video */}
+              loop = {true}
+            </ReactPlayer>
+          </div>
       </div>
 
     )
