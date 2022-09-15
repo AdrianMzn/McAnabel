@@ -2,6 +2,8 @@ import { now } from 'jquery';
 import React, { Component } from 'react'
 import "./CreaPedido.css"
 import Progressbar from './Progress_bar';
+import {NotificationManager, NotificationContainer} from 'react-notifications'
+import 'react-notifications/lib/notifications.css'
 //rce
 export class carritoActual extends Component {
 
@@ -21,7 +23,12 @@ export class carritoActual extends Component {
   }
 
   
-
+  lanzarNotificacion(minutos){
+    let timeout = 10000;
+    let prioridad = true;
+                NotificationManager.info("El pedido se entregará en aproximadamente " + minutos + " minutos.", "Pedido realizado", timeout, 
+                null, prioridad);
+  }
 
   render() {
     return (
@@ -54,7 +61,10 @@ export class carritoActual extends Component {
                 <br />
                   <input className="inputCreaPedido" placeholder="Direccion de envio"/>  <br />  <br /> 
                   <input className="inputCreaPedido" placeholder="Número de teléfono"/>  <br />  <br />  <br /> 
-                  <button type="button" className="btn btn-outline-success" onClick={ (e) => {this.realizarPedido(e) }}>Confirmar pedido</button>
+                  <button type="button" className="btn btn-outline-success" onClick={ (e) => {this.realizarPedido(e);  }}>Confirmar pedido</button>
+                  <div>
+                    <NotificationContainer />
+                  </div>
                 </form>  
           </div>
 
@@ -78,9 +88,7 @@ export class carritoActual extends Component {
 
     if( this.state.realizandoEnvio === false){
       this.setState({ realizandoEnvio: true });
-
       var request = new XMLHttpRequest();
-  
       request.open('POST', 'https://private-anon-9b875335ce-pizzaapp.apiary-mock.com/orders/');
   
       request.onreadystatechange = () => {
@@ -98,6 +106,8 @@ export class carritoActual extends Component {
             console.log("Num: " + newHoraPedido.substring(3, 5))
             let minutosCoste = Math.abs( ( parseInt(newHoraPedido.substring(0, 2), 10) - parseInt(newHoraEntrega.substring(0, 2), 10) ) * 60 +
                                       (parseInt(newHoraPedido.substring(3, 5), 10) - parseInt(newHoraEntrega.substring(3, 5), 10) ));
+
+            this.lanzarNotificacion(minutosCoste) ;
             let aumentoXsegundo = 100/(minutosCoste*60);
   
             const randFinGestion = 1 + Math.random() * (4 - 1);
@@ -128,7 +138,7 @@ export class carritoActual extends Component {
         'cart': [ \
           { \
             'menuItemId': 2, \
-            'quantity': 1 \
+            'quantity': 2 \
           }, \
           { \
             'menuItemId': 3, \
@@ -139,7 +149,7 @@ export class carritoActual extends Component {
             'quantity': 2 \
           } \
         ], \
-        'restuarantId': 1 \
+        'restuarantId': 3 \
       }";
   
       request.send(body);

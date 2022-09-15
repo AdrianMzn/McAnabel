@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import "./CreaPedido.css"
-import imgReturn from'../images/imgReturn.jpg';
+import imgReturn from'../images/imgReturn.png';
 import CarritoActual from './CarritoActual';
+import background from "../images/fondoCreaMenu.jpg";
 
 export class CreaPedido extends Component {
 
@@ -30,16 +31,20 @@ export class CreaPedido extends Component {
         this.setState( {carritoActual: this.state.carritoActual} );
     }
     
-
     render() {
         return (
-            <div>
+            <div style={{ backgroundImage: `url(${background})` , backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed',
+            backgroundSize: 'cover'}}>
                 <br /><br />
                 
-            <div className="row">
-            <h1 >Crea tu propio menú</h1>
+            <div className="row divCreaPedido">
+            <h1 className="titulo" >Crea tu propio menú</h1>
 
-                <div className="container col-xs-8 col-md-8 col-lg-8 center ">
+                <div className="container col-xs-1 col-md-1 col-lg-1 center ">
+                </div>
+                <div className="container col-xs-7 col-md-7 col-lg-7 center ">
 
                     { (this.state.actualState === "menu" ) &&
                     <div>
@@ -73,7 +78,7 @@ export class CreaPedido extends Component {
                                     <div className="col-xs-4 col-md-4 col-lg-4 producto">
                                         <img className="imagenProducto" src={imgReturn} alt="imgReturn no encontrada"
                                                 onClick={ (e) => {this.mostrarProductos(e, []); this.setState( {actualState: "menu" })}} /><br />
-                                                Volver al menu
+                                                <h4>Volver al menu</h4>
                                     </div>
                                 }
                                 {this.state.productos.map((producto, index) => {
@@ -81,7 +86,7 @@ export class CreaPedido extends Component {
                                         <div className="col-xs-4 col-md-4 col-lg-4 producto" key={index} 
                                                     onClick={ (e) => this.addProductoCarrito(e,producto) }>              
                                             <img className="imagenProducto" src={producto.imagen} alt="producto.imagen no encontrada"></img><br />
-                                            {producto.nombre} - {producto.precio} €
+                                            <h4>{producto.nombre} - {producto.precio} €</h4>
                                         </div>
                                 )
                                 })}
