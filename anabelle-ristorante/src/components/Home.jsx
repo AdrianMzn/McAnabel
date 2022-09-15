@@ -13,8 +13,8 @@ export class Home extends Component {
     return (
       <div>
 
-        <section id="carouselExampleFade" className="home-slider carouselExampleFade owl-carousel ">
-          <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+        <section className="home-slider owl-carousel ">
+          <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel" data-bs-ride="carousel">
 
             <div className="carousel-inner ">
               <div className="carousel-item active slider-item background-madera2 " >
@@ -82,6 +82,8 @@ export class Home extends Component {
                 
 
             </div>
+
+            {/*}
             <button className="carousel-control-prev" type="button" data-bs-target="carouselExampleFade" data-bs-slide="prev">
               <span className="carousel-control-prev-icon" aria-hidden="true"></span>
               <span className="visually-hidden">Previous</span>
@@ -89,7 +91,17 @@ export class Home extends Component {
             <button className="carousel-control-next" type="button" data-bs-target="carouselExampleFade" data-bs-slide="next">
               <span className="carousel-control-next-icon" aria-hidden="true"></span>
               <span className="visually-hidden">Next</span>
-            </button>
+    </button>*/}
+
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
           </div>
         </section>
         <section >
