@@ -7,19 +7,24 @@
 }
 
 .enlace-pedido {
-  background-color: #fac564;
+  background-color: #fac564 !important;
   margin: 10px;
 }
 
 .enlace-pedido a {
   color: black !important;
-  font-weight: 400;
+  font-weight: 500;
+  text-decoration:none
+}
+.enlace-pedido:hover a {
+  color: #fff !important;
+  font-weight: 500;
+  text-decoration:none
 }
 
 .enlace-pedido:hover {
-  background-color: transparent;
+  background-color: transparent !important;
   border: white 2px solid;
-  color: #fff !important;
   margin: 10px;
 }
 
@@ -34,28 +39,23 @@
 
 .enlace-contacto a {
   color: white !important;
-  font-weight: 400;
+  font-weight: 500;
+  text-decoration:none
 }
 
 .enlace-contacto:hover {
-  background-color: #fac564;
+  background-color: #fac564 !important;
   margin: 10px;
-  color: black !important;
-  font-weight: 700;
   border: none !important;
 }
 
-.enlace-contacto a:hover {
+.enlace-contacto:hover a{
   color: black !important;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
 }
 
-.enlace-pedido a:hover {
-  color: white !important;
-  font-weight: 700;
-  text-decoration: none;
-}
+
 
 .owl-carousel {
   position: relative;
@@ -162,7 +162,7 @@
 
 .owl-carousel.home-slider .slider-item .slider-text .subheading {
   font-family: "Nothing You Could Do", cursive;
-  font-size: 30px;
+  font-size: 40px;
   color: #fac564;
 }
 

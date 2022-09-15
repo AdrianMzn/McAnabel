@@ -3,11 +3,22 @@ import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 export class Navbar extends Component {
+
+  
   render() {
+    const logo = {
+    fontFamily: " Droid serif, serif",
+     fontSize: "30px",
+     color: "#fac564",
+     fontStyle: 'Italic'
+  }
+  const fondo = {
+    backgroundColor:"#121618"
+  }
     return (
-      <div>
-          <nav className="navbar  navbar-expand-lg navbar-dark bg-dark">
-            <Link className="navbar-brand titulo-logo" to="/">Anabelle Pizzeria</Link>
+      <div  >
+          <nav className="navbar  navbar-expand-lg navbar-dark  p-4" style={fondo}>
+            <Link className="navbar-brand titulo-logo" to="/" style={logo }>Anabelle Pizzeria</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
