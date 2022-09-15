@@ -1,11 +1,11 @@
-
-
 #cuerpo{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url("https://images4.alphacoders.com/276/276908.jpg"); 
+    font-family: 'Droid serif', serif; 
+    font-style: italic;
+    /* Ponemos como fondo una imagen que tenemos de archivo */
+    background-image: url(../images/bg_4.jpg);
     /* Hacemos translúcida la imagen */
-    background-color: rgba(250, 250, 250, 0.5);
-    background-blend-mode: lighten;
+    /* background-color: rgba(250, 250, 250, 0.5);
+    background-blend-mode: lighten; */
     /* La imagen tiene que cubrir toda la pantalla */
     background-size: cover;
     /* La imagen no se repite */
@@ -19,17 +19,14 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
-    /* Ajustamos la imagen al tamaño de la pantalla */
-    background-size: cover;
     /* Ajustamos la imagen al tamaño completo de la pantalla */
-    height: 92vh;
+    height: 100%;
 
 
 }
 
 #titulo1{
-    color: black;
+    color: #b48608;
     /* Ponemos la letra en negrita */
     font-weight: bold;
     font-size: 75px;
@@ -38,11 +35,18 @@
 }
 
 #titulo2{
-    /* Ponemos una letra de estilo italiana */
-    font-family: 'Italiana', cursive;
+    color: #b48608;
+    /* Ponemos la letra en negrita */
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 4%;
+}
+
+#cuerpo2{
     /* Ponemos en kursiva las letras */
     font-style: italic;
-    color: black;
+    color: rgb(198, 198, 198);
     text-align: center;
     margin-top: 3%;
     margin-left: 9%;
