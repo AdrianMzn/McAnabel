@@ -18,6 +18,7 @@ export class SobreNosotros extends Component {
           <div id = "video">
             <ReactPlayer>
               url = "https://youtu.be/jjloL1COohY"
+              controls = {true}
               {/* Ponemos en bucle el video */}
               loop = {true}
             </ReactPlayer>
