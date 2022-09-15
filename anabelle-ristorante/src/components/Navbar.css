@@ -1,4 +1,8 @@
-.titulo-logo{
-    color: #b48608; 
-     font-family: 'Droid serif', serif; 
+.titulo-logo a{
+    
+     font-family: "Nothing You Could Do", cursive;
+     font-size: 30px;
+     color: #fac564;
 } 
+/* color: #b48608; 
+     font-family: 'Droid serif', serif;  */
