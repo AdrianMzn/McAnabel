@@ -4,6 +4,9 @@ import imgReturn from'../images/imgReturn.png';
 import CarritoActual from './CarritoActual';
 import background from "../images/fondoCreaMenu.jpg";
 import menuPromociones from "../images/imagenMenus.jpg";
+import imgPromociones from "../images/imgPromotions.png";
+import imgPromocion1 from "../images/promocion1.png";
+
 export class CreaPedido extends Component {
 
     
@@ -17,6 +20,7 @@ export class CreaPedido extends Component {
             vinos: [],
             bebidas: [],
             productos: [],
+            promociones: [],
             actualState: "menu",
 
             rutaRestaurante: "http://localhost:3000/",
@@ -38,7 +42,21 @@ export class CreaPedido extends Component {
             backgroundAttachment: 'fixed',
             backgroundSize: 'cover'}}>
                 <br /><br />
-                
+                   
+
+                <div className="divPromociones center">
+                        <h1 className="titulo" >Promociones</h1>
+
+                        <img  src={menuPromociones} alt="Promociones"
+                            style={{ height: '30%', width: '70%', marginTop: '70px'}} />
+                </div>
+
+                <div className='row center' style={{ marginBottom: '50px', marginTop:'50px'}} >
+                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
+                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '80%'}}/>
+                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
+                </div>
+
                 <div className="row divCreaPedido">
                     <h1 className="titulo" >Crea tu propio menú</h1>
 
@@ -67,6 +85,13 @@ export class CreaPedido extends Component {
                                 <div className="col-xs-12 col-md-12 col-lg-6 divMenu">
                                     <img className="imagenMenu" src="https://images.hola.com/imagenes/cocina/escuela/200907079224/temperatura/vinos/enologia/0-876-296/temperatura-adobe-t.jpg?tx=w_568" 
                                             onClick={ (e) => {this.mostrarProductos(e, this.state.vinos); this.setState( {actualState: "productos" })}} alt="Vinos" />
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="col-xs-12 col-md-12 col-lg-12 divMenu">
+                                    <img className="imagenMenu" src={imgPromociones} 
+                                            onClick={ (e) => {this.mostrarProductos(e, this.state.promociones); this.setState( {actualState: "promociones" })}} alt="Promociones" />
                                 </div>
                             </div>
                         </div>}
@@ -99,19 +124,7 @@ export class CreaPedido extends Component {
                     </div>
                 </div>
 
-                <div className='row center' style={{ marginBottom: '50px', marginTop:'50px'}} >
-                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
-                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '80%'}}/>
-                        <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
-                </div>
-                
-
-                <div className="divCreaPedido center">
-                        <h1 className="titulo" >Promociones</h1>
-
-                        <img  src={menuPromociones} alt="Promociones"
-                            style={{ height: '30%', width: '70%', marginTop: '70px'}} />
-                </div>
+               
                 
             </div>
         )
@@ -152,6 +165,14 @@ export class CreaPedido extends Component {
         this.setState({
             bebidas: bebidasNew
         })
+
+        
+
+        this.setState({
+            promociones: [{id: 1, nombre: "Sueño tropical", imagen: `${imgPromocion1}`, precio: 31}]
+        })
+
+        console.log(this.state.promociones)
 
     }
 

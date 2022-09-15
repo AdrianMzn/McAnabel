@@ -136,6 +136,11 @@ h1 {
     min-height: 1050px;
 }
 
+.divPromociones{
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
 .envioEstado{
     font-family: "Poppins", Arial, sans-serif;
     color: gray;
