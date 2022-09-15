@@ -34,7 +34,7 @@ export class carritoActual extends Component {
     return (
       <div>
           <div className="carrito">
-              <h1>Menú actual</h1>
+              <h1 className="titulo2">Menú actual</h1>
               {this.state.productos.map((producto, index) => {
                   if( this.state.cantidad[index] > 0)
                   return(
@@ -56,7 +56,7 @@ export class carritoActual extends Component {
           </div>
 
           <div className="envioInfo center">
-                <h1>Información de envio</h1>
+                <h1 className="titulo2">Información de envio</h1>
                 <form>
                 <br />
                   <input className="inputCreaPedido" placeholder="Direccion de envio"/>  <br />  <br /> 
@@ -70,7 +70,7 @@ export class carritoActual extends Component {
 
           { this.state.realizandoEnvio === true && 
           <div className="envioEstado center">
-                <h1>Estado del envio</h1>
+                <h1 className="titulo2">Estado del envio</h1>
 
                 <div className="center">
                      Hora del pedido: {this.state.horaPedido} <br />

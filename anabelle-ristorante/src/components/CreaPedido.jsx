@@ -49,6 +49,7 @@ export class CreaPedido extends Component {
 
                     <div className="container col-xs-1 col-md-1 col-lg-1 center ">
                     </div>
+                    
                     <div className="container col-xs-7 col-md-7 col-lg-7 center ">
 
                         { (this.state.actualState === "menu" ) &&
@@ -118,7 +119,7 @@ export class CreaPedido extends Component {
                         <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '80%'}}/>
                         <hr style={{ color: '#b48608', backgroundColor: '#b48608', height: 3, width: '70%'}}/>
                 </div>
-                
+
 
                 <div className="divPromociones center">
                         <h1 className="titulo" >Promociones</h1>
