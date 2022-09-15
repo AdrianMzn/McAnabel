@@ -10,6 +10,8 @@ IDEA:
 
     API pizzas -> https://pizzaapp.docs.apiary.io/#reference/0/restaurants/get-the-menu
 
+    npm i react-scroll-to-top
+
 
 TAREAS:
 
