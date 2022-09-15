@@ -8,6 +8,7 @@ import CreaPedido from './components/CreaPedido';
 import Contacto from './components/Contacto';
 import SobreNosotros from './components/SobreNosotros';
 import ScrollToTop from "react-scroll-to-top";
+import Footer from './components/Footer';
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
               <Route exact path="/sobreNosotros" element={<SobreNosotros />} />
               <Route path="*" element={<Error />} />
             </Routes>
+
+            <Footer />
             
         </div>
       
