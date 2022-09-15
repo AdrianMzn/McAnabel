@@ -121,6 +121,8 @@ h1 {
 
 .carrito{
     margin-top: 100px;
+    font-family: "Poppins", Arial, sans-serif;
+    color: gray;
 }
 
 .envioInfo{

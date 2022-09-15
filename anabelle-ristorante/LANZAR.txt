@@ -1,0 +1,3 @@
+json-server --watch C:\Users\adria\Documents\GitHub\McAnabel\prueba.json
+
+npm start
