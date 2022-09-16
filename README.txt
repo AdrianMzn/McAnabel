@@ -12,6 +12,8 @@ IDEA:
 
     npm i react-scroll-to-top
 
+    carousel https://react-bootstrap.github.io/components/carousel/ 
+
 
 TAREAS:
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import pizza1 from '../images/bg_1.png';
 import pizza2 from '../images/bg_2.png';
+import CarouselFadeExample from './Carousel';
 
 import './Home.css'
 
@@ -15,8 +16,8 @@ export class Home extends Component {
     return (
       <div>
 
-        <section id="carouselExampleFade" className="home-slider carouselExampleFade owl-carousel ">
-          <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+        <section className="home-slider owl-carousel ">
+          <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel" data-bs-ride="carousel">
 
             <div className="carousel-inner ">
               <div className="carousel-item active slider-item background-madera2" data-bs-interval="800">
@@ -82,6 +83,8 @@ export class Home extends Component {
                 </div>
               </div>
             </div>
+
+            {/*}
             <button className="carousel-control-prev" type="button" data-bs-target="carouselExampleFade" data-bs-slide="prev">
               <span className="carousel-control-prev-icon" aria-hidden="true"></span>
               <span className="visually-hidden">Previous</span>
@@ -89,7 +92,17 @@ export class Home extends Component {
             <button className="carousel-control-next" type="button" data-bs-target="carouselExampleFade" data-bs-slide="next">
               <span className="carousel-control-next-icon" aria-hidden="true"></span>
               <span className="visually-hidden">Next</span>
-            </button>
+    </button>*/}
+
+            <a className="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span className="sr-only">Previous</span>
+            </a>
+            <a className="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+              <span className="carousel-control-next-icon" aria-hidden="true"></span>
+              <span className="sr-only">Next</span>
+            </a>
+
           </div>
         </section>
         <section className=''>
@@ -178,6 +191,8 @@ export class Home extends Component {
         </section>
 
 
+
+        <CarouselFadeExample />
 
       </div>
     )
