@@ -1,5 +1,6 @@
 .background-madera {
   background-image: url(../images/bg_1.jpg);
+  opacity: 1;
 }
 
 .background-madera2 {
@@ -14,12 +15,13 @@
 .enlace-pedido a {
   color: black !important;
   font-weight: 500;
-  text-decoration:none
+  text-decoration: none
 }
+
 .enlace-pedido:hover a {
   color: #fff !important;
   font-weight: 500;
-  text-decoration:none
+  text-decoration: none
 }
 
 .enlace-pedido:hover {
@@ -40,7 +42,7 @@
 .enlace-contacto a {
   color: white !important;
   font-weight: 500;
-  text-decoration:none
+  text-decoration: none
 }
 
 .enlace-contacto:hover {
@@ -49,7 +51,7 @@
   border: none !important;
 }
 
-.enlace-contacto:hover a{
+.enlace-contacto:hover a {
   color: black !important;
   font-weight: 500;
   text-decoration: none;
@@ -161,9 +163,12 @@
 }
 
 .owl-carousel.home-slider .slider-item .slider-text .subheading {
-  font-family: "Nothing You Could Do", cursive;
-  font-size: 40px;
+  /* font-family: "Nothing You Could Do", cursive; */
+  font-size: 60px;
   color: #fac564;
+  font-family: 'Droid serif', serif;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .owl-carousel.home-slider .slider-item .slider-text h1 {
@@ -322,25 +327,50 @@
   padding: 40px 20px 40px 20px;
   text-align: center;
 }
-.contacto p{
+
+.contacto p {
   color: #b0b4b8;
 }
 
-.contacto{
-  background-color: #343a40;
+.contacto {
+  background-color: #121618;
   color: #fff;
   padding: 20px;
   padding: 40px 20px 40px 20px;
   text-align: center;
+  
 }
-.social-location{
+
+.social-location {
   max-height: 300px;
 }
 
 /* Promocion */
 
-.promocion{
+.promocion {
   background-image: url(../images/bg_4.jpg);
-  min-height: 300px;
+  color: #fff;
+  text-align: center;
+}
 
+.promocion .row {
+  height: 450px;
+}
+
+.tituloPromo {
+  font-size: 60px;
+  color: #fac564;
+  font-family: 'Droid serif', serif;
+  font-style: italic;
+}
+
+.imgPromocion {
+  min-height: 60%;
+}
+
+/* Galeria */
+.fondo3 {
+  max-height: 300px;
+  min-height: 150px;
+  background-color: #121618;
 }

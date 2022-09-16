@@ -6,68 +6,68 @@ import './Home.css'
 
 function CarouselFadeExample() {
   return (
-    <Carousel fade>
+    <Carousel fade className='home-slider owl-carousel'>
       <Carousel.Item className="active slider-item background-madera2">
-      <div className="container ">
-            <div className="row slider-text align-items-center"  data-scrollax-parent="true">
+        <div className="container slider-text">
+          <div className="row  align-items-center" data-scrollax-parent="true">
 
             <div className="col-md-7 col-sm-12  ftco-animate">
-                <span className="subheading ">Welcome</span>
-                <h2 className="mb-4 ">COCINA ITALIANA</h2>
-                <h4 className="mb-4 mb-md-5 ">Nuestro pequeño restaurante se encuentra a orillas del río Ebro.</h4>
+              <span className="subheading ">Welcome</span>
+              <h2 className="mb-4 ">COCINA ITALIANA</h2>
+              <h4 className="mb-4 mb-md-5 ">Nuestro pequeño restaurante se encuentra a orillas del río Ebro.</h4>
             </div>
             <div className="col-md-5 col-sm-12  ftco-animate">
-                <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-pedido">
-                <Link to="/creaPedido" className='color-black'>Hacer pedido</Link>
-                </button>
-                <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-contacto">
+              <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-pedido">
+                <Link to="/creaPedido" className='color-black'>Haz tu pedido</Link>
+              </button>
+              <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-contacto">
                 <Link to="./contacto" className='color-black'>Contáctanos</Link>
-                </button>
+              </button>
             </div>
-            </div>
+          </div>
         </div>
-
-
-        
       </Carousel.Item>
-      <Carousel.Item>
-      <div className="container">
-            <div className="row slider-text align-items-center" data-scrollax-parent="true">
+      <Carousel.Item className='slider-item'>
+        <div className="container slider-text">
+          <div className="row slider-text align-items-center" data-scrollax-parent="true">
             <div className="col-md-6 col-sm-12 ftco-animate">
-                <span className="subheading">Delicious</span>
-                <h1 className="mb-4">Pizza Italiana</h1>
-                <p className="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-pedido">
-                <Link to="/creaPedido" className='color-black'>Hacer pedido</Link>
-                </button>
-                <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-contacto">
+              <span className="subheading">Deliciosa</span>
+              <h1 className="mb-4">Pizza Camprestre</h1>
+              <h5 className="mb-4 mb-md-5">Sentiras como te trasladas a la Toscana con nuestra pizza preparada con los productos más frescos</h5>
+              <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-pedido">
+                <Link to="/creaPedido" className='color-black'>Haz tu pedido</Link>
+              </button>
+              <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-contacto">
                 <Link to="./contacto" className='color-black' >Contáctanos</Link>
-                </button>
+              </button>
             </div>
             <div className="col-md-6 ftco-animate">
-                <img src={pizza1} className="img-fluid" alt="" />
+              <img src={pizza1} className="img-fluid" alt="" />
             </div>
+            <div className="col-md-6 ftco-animate">
+              <img src={pizza1} className="img-fluid" alt="" />
             </div>
+          </div>
         </div>
       </Carousel.Item>
-      <Carousel.Item>
-      <div className="container">
-            <div className="row slider-text align-items-center " data-scrollax-parent="true">
-            <div className="col-md-6 ftco-animate">
-                <img src={pizza2} className="img-fluid" alt="" />
-            </div>
-            <div className="col-md-6 col-sm-12  ftco-animate">
-                <span className="subheading">Peperoni</span>
-                <h1 className="mb-4">Pizza Italiana</h1>
-                <p className="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-pedido">
-                <Link to="/creaPedido" className='color-black'>Hacer pedido</Link>
-                </button>
-                <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-contacto">
-                <Link to="./contacto" className='color-black'>Contáctanos</Link>
-                </button>
-            </div>
-            </div>
+      <Carousel.Item className='slider-item'>
+        <div className="container slider-text">
+          <div className="row slider-text align-items-center " data-scrollax-parent="true">
+          <div className="col-md-6 ftco-animate">
+                      <img src={pizza2} className="img-fluid" alt="" />
+                    </div>
+                    <div className="col-md-6 col-sm-12  ftco-animate">
+                      <span className="subheading">Peperoni</span>
+                      <h5 className="mb-4">Pizza picante</h5>
+                      <p className="mb-4 mb-md-5">Si eres amante del picante, atrevete con nuestra pizza de peperoni picante.</p>
+                      <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-pedido">
+                        <Link to="/creaPedido" className='color-black'>Haz tu pedido</Link>
+                      </button>
+                      <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-contacto">
+                        <Link to="./contacto" className='color-black'>Contáctanos</Link>
+                      </button>
+                    </div>
+          </div>
         </div>
       </Carousel.Item>
     </Carousel>

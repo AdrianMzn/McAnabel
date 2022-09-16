@@ -16,7 +16,7 @@ export class Footer extends Component {
     backgroundColor:"#121618"
   }
     return (
-      <div  >
+      <div  className='footer'>
         <div style={fondo}>
         <p className='nombre'>
           Anabelle Ristorante
