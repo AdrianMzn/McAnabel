@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import pizza1 from '../images/bg_1.png';
 import pizza2 from '../images/bg_2.png';
-import CarouselFadeExample from './Carousel';
 import galery1 from '../images/gallery-1.jpg';
 import galery2 from '../images/image_5.jpg';
 import galery3 from '../images/gallery-3.jpg';
@@ -19,15 +18,15 @@ export class Home extends Component {
         <section className="home-slider owl-carousel ">
           <div id="carouselExampleFade" className="carousel slide carousel-fade " data-ride="carousel" data-bs-ride="carousel">
             <div className="carousel-inner ">
-              <div className="carousel-item active slider-item background-madera2 " data-bs-interval="1000">
+              <div className="carousel-item active slider-item background-madera2 " data-bs-interval="2000">
                 
                 <div className="container bg-dark bg-opacity-25">
                   <div className="row slider-text align-items-center" data-scrollax-parent="true">
                     
                     <div className="col-md-7 col-sm-12  ftco-animate">
-                      <span className="subheading ">Welcome</span>
-                      <h2 className="mb-4 ">COCINA ITALIANA</h2>
-                      <h4 className="mb-4 mb-md-5 ">Prueba nuestra pizza especial Anabelle con jugosos pedacitos de <b>Tomahawk </b>extratierno</h4>
+                      <span className="subheading ">Anabelle</span>
+                      <h2 className="mb-4 ">PIZZA ESPECIAL</h2>
+                      <h4 className="mb-4 mb-md-5 ">Prueba nuestra pizza Anabelle Speciale con jugosos pedacitos de <b>Tomahawk </b>extratierno</h4>
                     </div>
                     <div className="col-md-5 col-sm-12  ftco-animate">
                       <button className="btn btn-white p-3 px-xl-4 py-xl-3 enlace-pedido">
