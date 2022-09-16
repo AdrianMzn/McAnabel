@@ -18,7 +18,7 @@ export class Home extends Component {
         <section className="home-slider owl-carousel ">
           <div id="carouselExampleFade" className="carousel slide carousel-fade " data-ride="carousel" data-bs-ride="carousel">
             <div className="carousel-inner ">
-              <div className="carousel-item active slider-item background-madera2 " data-bs-interval="2000">
+              <div className="carousel-item active slider-item background-madera2 " data-bs-interval="3000">
                 
                 <div className="container bg-dark bg-opacity-25">
                   <div className="row slider-text align-items-center" data-scrollax-parent="true">
