@@ -4,6 +4,8 @@ import "./CreaPedido.css"
 import Progressbar from './Progress_bar';
 import {NotificationManager, NotificationContainer} from 'react-notifications'
 import 'react-notifications/lib/notifications.css'
+import imgCasa from "../images/casa.png";
+import imgRestaurante from "../images/restaurante.png";
 //rce
 export class carritoActual extends Component {
 
@@ -76,7 +78,24 @@ export class carritoActual extends Component {
                      Hora del pedido: {this.state.horaPedido} <br />
                      Hora prevista de entrega: {this.state.horaEntrega} <br />
                      Estado: {this.state.estadoPedido} <br /> 
-                    <Progressbar bgcolor="orange" progress={this.state.progress}  height={30} />
+
+                     <div className="row center" style={{display: "flex", marginTop: "30px"}}>
+
+                          <div className="col-md-3 center">
+                                <img src={imgRestaurante} alt="restaurante" style={{width: "50%", height: "50%"}}/>
+                          </div>
+
+                          <div className="col-md-6 center">
+                                <Progressbar bgcolor="orange" progress={this.state.progress}  height={30} />
+                          </div>
+
+                          <div className="col-md-3 center">
+                                <img src={imgCasa} alt="casa" style={{width: "50%", height: "50%"}}/>
+                          </div>
+                          
+                          
+                     </div>
+                    
                 </div>    
           </div>}
       </div>

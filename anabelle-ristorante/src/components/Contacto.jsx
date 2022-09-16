@@ -9,9 +9,13 @@ export class Contacto extends Component {
 
     constructor() {
       super();
-      this.state = {value: ''};
+      this.state = {
+        nombre: '',
+        apellido: '',
+        mensaje: ''
+      };
 
-      this.handleChange = this.handleChange.bind(this);
+      this.handleInputChange = this.handleInputChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -22,8 +26,16 @@ export class Contacto extends Component {
                   null, prioridad);
     }
 
-    handleChange(event) {
-      this.setState({value: event.target.value});
+    handleInputChange(event) {
+      //this.setState({value: event.target.value});
+
+      const target = event.target;
+      const value = target.type === 'checkbox' ? target.checked : target.value;
+      const name = target.name;
+
+      this.setState({
+        [name]: value
+      });
     }
   
     handleSubmit(event) {
@@ -69,9 +81,9 @@ export class Contacto extends Component {
               <h1 className="titulo">Danos tu opinión</h1>
               <br />
               <form onSubmit={this.handleSubmit}>
-                <input className="campoCuestionario" type="text" value={this.state.nombre} onChange={this.handleChange} placeholder="Nombre"/> <br />
-                <input className="campoCuestionario" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Apellidos"/> <br />
-                <textarea rows="5" className="campoCuestionario" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Mensaje"/> <br />
+                <input className="campoCuestionario" type="text" name="nombre" value={this.state.nombre} onChange={this.handleInputChange} placeholder="Nombre"/> <br />
+                <input className="campoCuestionario" type="text" name="apellido" value={this.state.apellido} onChange={this.handleInputChange} placeholder="Apellidos"/> <br />
+                <textarea rows="5" className="campoCuestionario" type="text" name="mensaje" value={this.state.mensaje} onChange={this.handleInputChange} placeholder="Mensaje"/> <br />
                 <button className="botonEnviar" type="submit">Enviar reseña</button>
               </form>
             </div>

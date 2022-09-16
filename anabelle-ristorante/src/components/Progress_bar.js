@@ -4,12 +4,11 @@ const Progress_bar = ({bgcolor,progress,height}) => {
   
     const Parentdiv = {
         height: height,
-        width: '60%',
+        width: '100%',
         backgroundColor: 'whitesmoke',
         borderRadius: 40,
         position: 'absolute', left: '50%', top: '50%',
         transform: 'translate(-50%, -50%)',
-        marginTop: '80px',
       }
       
       const Childdiv = {
