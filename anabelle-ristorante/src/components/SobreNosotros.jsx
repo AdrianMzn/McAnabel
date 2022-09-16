@@ -35,7 +35,7 @@ export class SobreNosotros extends Component {
             // Autoplay
             loop
             // Ajustamos el volumen
-            volume={0.0}
+            volume={0.15}
             // Para no darle al play
             playing
             // Ajustamos el video al centro de la pantalla
