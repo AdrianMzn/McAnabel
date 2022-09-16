@@ -6,6 +6,8 @@ import background from "../images/fondoCreaMenu.jpg";
 import menuPromociones from "../images/imagenMenus.jpg";
 import imgPromociones from "../images/imgPromotions.png";
 import imgPromocion1 from "../images/promocion1.png";
+import imgPromocion2 from "../images/promocion2.png";
+import imgPromocion3 from "../images/promocion3.png";
 
 export class CreaPedido extends Component {
 
@@ -76,8 +78,8 @@ export class CreaPedido extends Component {
                                 </div>
                             </div>
 
-                            <div className="row">
-                                <div className="divMenu">
+                            <div className="row center">
+                                <div className="divMenu col-md-6">
                                     <img className="imagenMenu" src={imgPromociones} 
                                             onClick={ (e) => {this.mostrarProductos(e, this.state.promociones); this.setState( {actualState: "promociones" })}} alt="Promociones" />
                                 </div>
@@ -188,7 +190,9 @@ export class CreaPedido extends Component {
         
 
         this.setState({
-            promociones: [{id: 1, nombre: "Sueño tropical", imagen: `${imgPromocion1}`, precio: 31}]
+            promociones: [{id: 1, nombre: "Sueño tropical", imagen: `${imgPromocion1}`, precio: 31},
+                          {id: 2, nombre: "Salto al cielo", imagen: `${imgPromocion2}`, precio: 28},
+                          {id: 3, nombre: "Sabores campestres", imagen: `${imgPromocion3}`, precio: 73}  ]
         })
 
         console.log(this.state.promociones)
