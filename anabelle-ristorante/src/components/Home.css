@@ -314,13 +314,16 @@
   background: white;
 }
 
-/* Contacto */
+/* Social Contacto */
 
 .social {
   background-color: #fac564;
   padding: 20px;
   padding: 40px 20px 40px 20px;
   text-align: center;
+}
+.contacto p{
+  color: #b0b4b8;
 }
 
 .contacto{
@@ -329,4 +332,15 @@
   padding: 20px;
   padding: 40px 20px 40px 20px;
   text-align: center;
+}
+.social-location{
+  max-height: 300px;
+}
+
+/* Promocion */
+
+.promocion{
+  background-image: url(../images/bg_4.jpg);
+  min-height: 300px;
+
 }

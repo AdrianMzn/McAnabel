@@ -29,7 +29,7 @@ export class SobreNosotros extends Component {
         </h3>
 
         {/* Video */}
-        <div id="video">
+        <div id="video" className=''>
           <ReactPlayer
             url='https://youtu.be/jjloL1COohY'
             // Autoplay
