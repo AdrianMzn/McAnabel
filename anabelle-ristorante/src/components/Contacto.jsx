@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import "./Contacto.css"
 import background from "../images/fondoCreaMenu.jpg";
 import img from "../images/bg_2.jpg"
+import {NotificationManager, NotificationContainer} from 'react-notifications'
+import 'react-notifications/lib/notifications.css'
 
 export class Contacto extends Component {
 
@@ -13,6 +15,13 @@ export class Contacto extends Component {
       this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    lanzarNotificacion(){
+      let timeout = 10000;
+      let prioridad = true;
+                  NotificationManager.info("Muchas gracias por su tiempo, que aproveche!", "Comentario recibido", timeout, 
+                  null, prioridad);
+    }
+
     handleChange(event) {
       this.setState({value: event.target.value});
     }
@@ -20,6 +29,7 @@ export class Contacto extends Component {
     handleSubmit(event) {
       //alert('A name was submitted: ' + this.state.value);
       event.preventDefault();
+      this.lanzarNotificacion() ;
     }
 
   render() {
@@ -30,6 +40,10 @@ export class Contacto extends Component {
       backgroundSize: 'cover'}}>
 
         <br /> <br />
+
+        <div>
+          <NotificationContainer />
+        </div>
 
         <div className="divContacto">
             

@@ -17,7 +17,9 @@ export class Footer extends Component {
   }
     return (
       <div  className='footer'>
+
         <div style={fondo}>
+          <br /> <br />
         <p className='nombre'>
           Anabelle Ristorante
           </p>
