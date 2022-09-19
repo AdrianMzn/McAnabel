@@ -21,3 +21,5 @@ Método para desplegar:
                     npm start
               
               
+En la carpeta capturasAplicacion se pueden encontrar imagenes capturadas de la aplicación en funcionamiento.
+              
