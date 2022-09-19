@@ -105,7 +105,7 @@ export class carritoActual extends Component {
   realizarPedido(event){
     event.preventDefault();
 
-    if( this.state.realizandoEnvio === false){
+    if( this.state.realizandoEnvio === false && this.state.productos !== undefined && this.state.productos.length !== 0){
       this.setState({ realizandoEnvio: true });
       var request = new XMLHttpRequest();
       request.open('POST', 'https://private-anon-9b875335ce-pizzaapp.apiary-mock.com/orders/');
