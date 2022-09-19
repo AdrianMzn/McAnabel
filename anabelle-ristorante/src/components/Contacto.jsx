@@ -27,7 +27,6 @@ export class Contacto extends Component {
     }
 
     handleInputChange(event) {
-      //this.setState({value: event.target.value});
 
       const target = event.target;
       const value = target.type === 'checkbox' ? target.checked : target.value;

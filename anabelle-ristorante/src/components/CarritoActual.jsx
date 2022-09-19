@@ -20,8 +20,12 @@ export class carritoActual extends Component {
       horaEntrega: now,
       realizandoEnvio: false,
       estadoPedido: "Gestionando...",
+      direccion: '',
+      numeroTelefono: '',
       rutaPedido: "https://private-anon-daf4fe63f9-pizzaapp.apiary-mock.com/orders/"
     }
+
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   
@@ -61,8 +65,8 @@ export class carritoActual extends Component {
                 <h1 className="titulo2">Información de envio</h1>
                 <form>
                 <br />
-                  <input className="inputCreaPedido" placeholder="Direccion de envio"/>  <br />  <br /> 
-                  <input className="inputCreaPedido" placeholder="Número de teléfono"/>  <br />  <br />  <br /> 
+                  <input className="inputCreaPedido" type="text" name="direccion" value={this.state.direccion} placeholder="Direccion de envio" onChange={this.handleInputChange}/>  <br />  <br /> 
+                  <input className="inputCreaPedido" type="number" name="numeroTelefono" value={this.state.numeroTelefono} placeholder="Número de teléfono" onChange={this.handleInputChange}/>  <br />  <br />  <br /> 
                   <button type="button" className="btn btn-outline-success" onClick={ (e) => {this.realizarPedido(e);  }}>Confirmar pedido</button>
                   <div>
                     <NotificationContainer />
@@ -102,17 +106,27 @@ export class carritoActual extends Component {
     )
   }
 
+  handleInputChange(event) {
+
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
   realizarPedido(event){
     event.preventDefault();
 
-    if( this.state.realizandoEnvio === false && this.state.productos !== undefined && this.state.productos.length !== 0){
+    if( this.state.realizandoEnvio === false && this.state.productos.length !== 0 && this.state.direccion.length !== 0 && this.state.numeroTelefono.length == 9 ){
       this.setState({ realizandoEnvio: true });
       var request = new XMLHttpRequest();
       request.open('POST', 'https://private-anon-9b875335ce-pizzaapp.apiary-mock.com/orders/');
   
       request.onreadystatechange = () => {
         if (request.readyState === 4) {
-            console.log('Body:', request.responseText);
   
             let data = JSON.parse(request.responseText);
             let newHoraPedido = data.orderedAt.split("T")[1].substring(0, 5);
@@ -122,7 +136,6 @@ export class carritoActual extends Component {
               horaEntrega: newHoraEntrega,
             })
   
-            console.log("Num: " + newHoraPedido.substring(3, 5))
             let minutosCoste = Math.abs( ( parseInt(newHoraPedido.substring(0, 2), 10) - parseInt(newHoraEntrega.substring(0, 2), 10) ) * 60 +
                                       (parseInt(newHoraPedido.substring(3, 5), 10) - parseInt(newHoraEntrega.substring(3, 5), 10) ));
 
@@ -193,7 +206,6 @@ export class carritoActual extends Component {
     let cantidadNew = this.state.cantidad;
 
     if(cantidadNew[index] + cantidad <= 0){
-      console.log("Eliminamos")
       cantidadNew.splice(index, 1);
 
       let productosNew = this.state.productos.filter(item => item.nombre !== this.state.productos[index].nombre);
