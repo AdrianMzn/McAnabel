@@ -1,30 +1,23 @@
-IDEA:
+Resumen de la aplicacion web:
 
-    APP de pizzas con envio a domicilio
- 
-    https://desarrolloweb.com/articulos/crear-api-rest-json-server.html   ->   Crear API
-
-    Easter Egg Tomahawk
-
-    Tema de pizzas -> https://technext.github.io/pizza/index.html# 
-
-    API pizzas -> https://pizzaapp.docs.apiary.io/#reference/0/restaurants/get-the-menu
-
-    npm i react-scroll-to-top
-
-    carousel https://react-bootstrap.github.io/components/carousel/ 
+"Se trata de una aplicación web propiedad de un restaurante de comidas de todo tipo que permite 
+a los clientes de este restaurante la entrega de su comida a domicilio"
 
 
-TAREAS:
+Método para desplegar:
 
-    Crear la API y sacar imagenes de pizzas  -> Jorge
-
-    Sacar la info de las pizzas y sacar imagenes de pizzas -> Adrian
-
-    Modificar tema de las pizzas y juntarlo al proyecto de React -> Katty, Mario, Patricia
-
-
-PAGINAS:
-
-
-
+      1) Primero deben instalarse las dependencias desde una terminal, para ello nos situamos dentro del 
+         directorio "anabelle-ristorante" y ejecutamos el siguiente comando:
+                    
+                    npm i
+      
+      2) Despues nos situamos en la carpeta raiz deeste repositorio y vamos a lanzar el servidor que contiene 
+         los productos contenidos en el catalogo del restaurante:
+          
+                    json-server --watch productos.json     
+                    
+      3) Por ultimo nos volvemos a colocar en la carpeta "anabelle-ristorante" y lanzamos la aplicacion web:
+      
+                    npm start
+              
+              
