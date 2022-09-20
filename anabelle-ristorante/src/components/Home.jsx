@@ -122,7 +122,7 @@ export class Home extends Component {
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-geo-alt-fill mb-3" viewBox="0 0 16 16">
                         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                       </svg>
-                      <h6>Paseo de Echegaray, 21</h6>
+                      <h5>Paseo de Echegaray, 21</h5>
                     </div>
                   </div>
                   <div className='row'>
@@ -137,7 +137,7 @@ export class Home extends Component {
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-telephone-fill mb-3" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                       </svg>
-                      <h6>956 56 22 20</h6>
+                      <h5>956 56 22 20</h5>
                     </div>
                     <div className='row'>
                       <div className='col-md-11'>
@@ -152,7 +152,7 @@ export class Home extends Component {
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-clock-fill mb-3" viewBox="0 0 16 16">
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
                       </svg>
-                      <h6>Abierto Martes-Domingos</h6>
+                      <h5>Abierto Martes-Domingos</h5>
                     </div>
                   </div>
                   <div className='row'>
@@ -174,7 +174,7 @@ export class Home extends Component {
             </div>
             <div className="col-sx-4  col-md-6 text-center ">
               <div className=' pb-3'>
-                <span className='tituloPromo ' >Promociones</span>
+                <span className='tituloPromo'>Promociones</span>
               </div>
               <div>
                 <h4>Síguenos en las redes </h4>

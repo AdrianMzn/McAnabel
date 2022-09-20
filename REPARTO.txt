@@ -17,11 +17,13 @@ IDEA:
 
 TAREAS:
 
-    Crear la API y sacar imagenes de pizzas  -> Jorge
+    Crear la API , sacar imagenes de pizzas y crear componente Footer  -> Jorge
 
-    Sacar la info de las pizzas y sacar imagenes de pizzas -> Adrian
+    Creación de los componentes Carrito,  CreaPedido, Contacto y Error -> Adrian
 
-    Modificar tema de las pizzas y juntarlo al proyecto de React -> Katty, Mario, Patricia
+    Modificar y adjuntar el tema pizzas al proyecto. Creación de los componentes Navbar y Home -> Patricia
+
+    Creación del componente SobreNosotros -> Mario
 
 
 

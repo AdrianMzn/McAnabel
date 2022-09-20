@@ -1,3 +1,5 @@
-json-server --watch C:\Users\adria\Documents\GitHub\McAnabel\prueba.json
+Dentro de la carpeta McAnabell
+json-server --watch C:\Users\adria\Documents\GitHub\McAnabel\productos.json
 
+Dentro la carperta anabelle-ristorante, y desde otra terminal.
 npm start
