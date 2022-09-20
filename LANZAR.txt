@@ -1,5 +1,5 @@
-Dentro de la carpeta McAnabell
-json-server --watch C:\Users\adria\Documents\GitHub\McAnabel\productos.json
+Dentro de la carpeta raiz de este directorio ejecutar en una terminal
+    json-server --watch db.json -p 8000
 
-Dentro la carperta anabelle-ristorante, y desde otra terminal.
-npm start
+Y desde otra terminal en la raiz.
+    npm start
