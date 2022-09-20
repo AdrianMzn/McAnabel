@@ -1,3 +1,6 @@
+Instalar las dependencias, para ello ejecutar desde el directorio raiz de este repositorio:
+    npm i
+
 Dentro de la carpeta raiz de este directorio ejecutar en una terminal
     json-server --watch db.json -p 8000
 
