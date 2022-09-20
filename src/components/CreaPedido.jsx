@@ -25,7 +25,7 @@ export class CreaPedido extends Component {
             promociones: [],
             actualState: "menu",
 
-            rutaRestaurante: "http://localhost:3000/",
+            rutaRestaurante: "http://localhost:8000/",
         }
 
         this.carritoActual = React.createRef();
