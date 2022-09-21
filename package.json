@@ -29,7 +29,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server  --watch db.json --port 8000",
-    "dev": "concurrently \"npm run server\" \"npm run start\""
+    "dev": "concurrently \"npm run server\" \"npm run start\"",
+    "page": "npm-run-all --parallel server start" 
   },
   "eslintConfig": {
     "extends": [
