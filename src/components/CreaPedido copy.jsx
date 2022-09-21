@@ -8,7 +8,6 @@ import imgPromociones from "../images/imgPromotions.png";
 import imgPromocion1 from "../images/promocion1.png";
 import imgPromocion2 from "../images/promocion2.png";
 import imgPromocion3 from "../images/promocion3.png";
-import data from "../db.json"
 
 export class CreaPedido extends Component {
 
@@ -16,7 +15,6 @@ export class CreaPedido extends Component {
     constructor(){
         super(); //siempre llama a super para no interferir con el ciclo de vida
 
-        console.log(data);
         console.log("Paso 1. Constructor: Inicializamos los datos del estado");
         this.state = {
             pizzas: [],
@@ -159,31 +157,32 @@ export class CreaPedido extends Component {
         console.log(this.state.productos);
     }
 
-    llamarAPI = async(word) => {
-
-        return data[word];
+    llamarAPI = async(URL) => {
+        const respuesta = await fetch (URL);
+        const data = await respuesta.json();
+        return data;
     }
 
     async componentDidMount(){
         console.log("Paso 3. El componente se ha montado");
     
         //Pedimos las pizzas
-        let pizzasNew = await this.llamarAPI("pizzas");
+        let pizzasNew = await this.llamarAPI(this.state.rutaRestaurante + "pizzas");
         this.setState({
             pizzas: pizzasNew
         })
 
-        let pastasNew = await this.llamarAPI("pastas");
+        let pastasNew = await this.llamarAPI(this.state.rutaRestaurante + "pastas");
         this.setState({
             pastas: pastasNew
         })
 
-        let vinosNew = await this.llamarAPI("vinos");
+        let vinosNew = await this.llamarAPI(this.state.rutaRestaurante + "vinos");
         this.setState({
             vinos: vinosNew
         })
 
-        let bebidasNew = await this.llamarAPI("bebidas");
+        let bebidasNew = await this.llamarAPI(this.state.rutaRestaurante + "bebidas");
         this.setState({
             bebidas: bebidasNew
         })

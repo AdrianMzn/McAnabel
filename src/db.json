@@ -1,0 +1,345 @@
+{  
+  "pizzas": [
+        {
+            "id": 1,
+            "nombre": "Carbonara",
+            "ingredientes":[ "Crema Fresca", "Mozarella", "Bacon", "Cebolla", "Champiñon"],
+            "imagen": "https://www.dominospizza.es/images/PolloParrillaDelivery_P2200923_0_ES.png",
+            "descripcion": "La más cremosa que hayas probado jamás",
+            "precio": 21.99
+        },
+        {
+            "id": 2,
+            "nombre": "Barbacoa",
+            "ingredientes":[ "Salsa BBQ", "Mozarella", "Vacuno", "Cebolla", "Bacon"],
+            "imagen": "https://s4d-images.telepizza.es/Products/Original/Barbacoa_con_Cuarto_de_Libra-2567.jpeg",
+            "descripcion": "Con salsa barbacoa casera y un sabor inigualable",
+            "precio": 22.99
+        },
+        {
+            "id": 3,
+            "nombre": "American Legend",
+            "ingredientes":[ "Salsa BBQ Texas", "Mozarella", "Bacon crispy", "Pollo a la Parrilla", "Vacuno", "Cebolla Caramelizada", "Bacon", "Borde de chedar"],
+            "imagen": "https://2.bp.blogspot.com/-43YD4CXCTNM/W5l_frW9_QI/AAAAAAAAeL4/Wv3drGw4qPo_skxXxSzBBNsnU1Sz5A91QCLcBGAs/s1600/pulled-pork-pizza-2013x600.jpg",
+            "descripcion": "La más completa de todas",
+            "precio": 25.99
+        },
+        {
+            "id": 4,
+            "nombre": "Anabelle Speciale",
+            "ingredientes":[ "Mozarella","Crema de Barbacoa","Tomahack Ahumado desmenuzado", "Cebolla Morada", "Albahaca", "Pimiento Verde","Dados de Oliva Negra"],
+            "imagen": "https://southerndiscourse.com/wp-content/uploads/2020/07/BBQ-Pulled-Pork-Pizza-Feature.jpg",
+            "descripcion": "La especialidad de la casa, esta muy buena tu come y calla",
+            "precio":26.50
+
+        },
+        {
+            "id": 5,
+            "nombre": "Italian Pizza",
+            "ingredientes":[ "Mozarella", "Rodajas de patata", "Champiñones", "Pimiento Rojo", "Olivas Negras", "Cebolla Morada","Bacon"],
+            "imagen": "https://spartanfitness.es/wp-content/uploads/2020/05/pizza-proteica-pollo-receta-750x400.jpg",
+            "descripcion": "La más italiana de todas",
+            "precio": 21.50
+        },
+        {
+            "id": 6,
+            "nombre": "Greek Pizza",
+            "ingredientes":[ "Mozarella fresca", "Anchoas", "Olivas", "Espinacas Frescas", "Parmesano"],
+            "imagen": "https://www.les-escapades-rome.fr/wp-content/uploads/2018/10/pizza-2802332_1280.jpg",
+            "descripcion": "Con las mejores y más frescas anchoas",
+            "precio":23.00
+        },
+        {
+            "id": 7,
+            "nombre": "Ham & Pinneaple",
+            "ingredientes":[ "Base de tomate", "Jamon cocido", "Mozarella", "Piña"],
+            "imagen": "https://foodscene.deliveroo.co.uk/assets/images/blogs/foodscene.deliveroo.co.uk/en/cuisine-inspiration/1xuae1hVL1cPIJEb9JCelzL0j9CppWTtueuSBx6pbFrg/h_16_classic_ham_and_pineapple.jpg",
+            "descripcion": "Para los cuestionados fans de la piña",
+            "precio": 20.00
+        },
+        {
+            "id": 8,
+            "nombre": "Margarita Speciale",
+            "ingredientes":[ "Base de tomate", "Mozarella", "Albahaca"],
+            "imagen":"https://carta.menu/storage/media/dishes_main/2217852/conversions/dish_thumbnail.jpg",
+            "descripcion": "Para los más especiales nuestra revisión de la receta clásica",
+            "precio": 18.00
+        },
+        {
+            "id": 9,
+            "nombre": "Vegerarianini",
+            "ingredientes": "Setas Variadas, Ostras, Patata Asada, Pimenton, Pimiento Rojo, Rucula",
+            "imagen": "https://cdn.pixabay.com/photo/2018/04/07/15/03/pizza-3298685_960_720.jpg",
+            "descripcion": "Perfecta delicatessen para que tu paladar deguste el increible aroma del mar y la montaña",
+            "precio": 14.50
+        },
+        {
+            "id": 10,
+            "nombre": "Sour Cream",
+            "ingredientes": "Salsa Barbacoa, Cebolla Morada, Maíz dulce, Mozarella Fresca, Pepinillos,Ajetes",
+            "imagen": "https://cdn.pixabay.com/photo/2018/04/11/03/13/food-3309418_960_720.jpg",
+            "descripcion": "Todo un manjar para tu paladar con un toque amargo y dulce",
+            "precio": 15.20
+        }
+    ],
+    "pastas": [
+        {
+            "id": 1,
+            "nombre": "Carbonara",
+            "ingredientes": "Crema Fresca, Bacon, Cebolla, Champiñon",
+            "imagen": "https://www.pequerecetas.com/wp-content/uploads/2010/10/espaguetis-carbonara1.jpg",
+            "descripcion": "Con nuestra famosa salsa carbonara ganadora de numerosos premios",
+            "precio": 12.95
+        },
+        {
+            "id": 2,
+            "nombre": "Bolognesa",
+            "ingredientes": "Carne picada, Tomate, Cebolla, Pimiento, Champiñon",
+            "imagen": "https://bakeitwithlove.com/wp-content/uploads/2022/01/Spaghetti-Bolognese-sq.jpg",
+            "descripcion": "La receta clásica con un toque renovado",
+            "precio": 12.95
+        },
+        {
+            "id": 3,
+            "nombre": "Pesto",
+            "ingredientes": "Pesto, Tomate, Cebolla, Pimiento, Piñones",
+            "imagen": "https://recetas-rapidas.es/wp-content/uploads/2018/10/espaguetis-al-pesto-recetas-comida.jpg",
+            "descripcion": "Con nuestra combinación de hierbas secreta que hará que tu paladar flipe",
+            "precio": 12.95
+        },
+        {
+            "id": 4,
+            "nombre": "Tallarines Vegui",
+            "ingredientes": "Pimiento Verde, Pimiento Rojo, Brocoli,Calabacín, Setas salteadas, Sesamo, Salsa de soja",
+            "imagen": "https://images.pexels.com/photos/2456435/pexels-photo-2456435.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "descripcion": "Nuestro plato estrella para los mas respetuosos con los animales",
+            "precio": 14.00
+        },
+        {
+            "id": 5,
+            "nombre": "Ravioli Carnivoro",
+            "ingredientes": "Raviolis de Carne, Crema fresca, Setas salteadas, Perejil, Parmesano",
+            "imagen": "https://images.pexels.com/photos/688804/pexels-photo-688804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "descripcion": "Para los amantes de la pasta rellena",
+            "precio": 16.00
+        },
+        {
+            "id": 6,
+            "nombre": "Tomati Espechiale",
+            "ingredientes": "Pasta Penne, Tomate Cherry Natural, Salsa de Tomate, Queso Mozzarella, Parmesano, Brotes de Menta",
+            "imagen": "https://images.pexels.com/photos/4936945/pexels-photo-4936945.jpeg",
+            "descripcion": "Nuestra receta de pasta con tomate cherry natural",
+            "precio": 15.60
+        },
+        {
+            "id": 7,
+            "nombre": "Di Mare",
+            "ingredientes": "Tallarines Frescos, Pimiento Verde, Pimiento Rojo, Ajetes, Espinacas, Gambas, Parmesano",
+            "imagen": "https://images.pexels.com/photos/2092906/pexels-photo-2092906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "descripcion": "Elevate hasta otro universo degustando nuestro plato estrella",
+            "precio": 15.00
+        }   
+
+    ],
+    "hamburguesas": [
+        {
+            "id": 1,
+            "nombre": "Smoke",
+            "ingredientes": "Carne, pulled pork, Queso americano, Aros de cebolla, Lechuga batavia, Salsa Barbacoa Speciale.",
+            "imagen": "https://www.goiko.com/wp-content/uploads/2022/02/LaSmoke_Ficha-de-producto-1200x600-1-340x340.jpg",
+            "descripcion": "Esta burger está que echa humo.",
+            "precio": 9.90
+        },
+        {
+            "id": 2,
+            "nombre": "Kendall Bacon",
+            "ingredientes": "Carne picada  a la plancha, Bacon bits, Cebolla caramelizada, Queso de cabra, Queso americano",
+            "imagen": "https://www.goiko.com/wp-content/uploads/2021/07/KendallBacon_Ficha-de-producto-1200x600-1-340x340.jpg",
+            "descripcion": "Para los bacon lovers",
+            "precio": 10.00
+        },
+        {
+            "id": 3,
+            "nombre": "Kevin Kostner",
+            "ingredientes": "Carne, bacon bits, Cebolla crunchy y queso americano, Costilla desmenuzada y Salsa Barbacoa",
+            "imagen": "https://www.goiko.com/wp-content/uploads/2020/12/ficha-de-producto_1200x600-340x340.jpg",
+            "descripcion": "Con nuestra combinación de hierbas secreta que hará que tu paladar flipe",
+            "precio": 14.50
+        },
+        {
+            "id": 4,
+            "nombre": "La Tumberg",
+            "ingredientes": "Beyond Meat, alternativa vegana al queso, Guacamole, Tomate seco confitado, Lechuga batavia, Pan de cereales vegetariano.",
+            "imagen": "https://www.goiko.com/wp-content/uploads/2022/02/LaGreta_Ficha-de-producto-1200x600-1-340x340.jpg",
+            "descripcion": "Vegerarianos esta es vuestra hamburguesa",
+            "precio": 12.00
+        },
+        {
+            "id": 5,
+            "nombre": "La Yankee",
+            "ingredientes": "Carne de vaca, Costilla de cerdo en salsa Barbacoa, Queso americano, Cebolla al grill, Lechuga batavia.",
+            "imagen": "https://www.goiko.com/wp-content/uploads/2017/03/Yankee_Web_Desktop-340x340.jpg",
+            "descripcion": "Para los que les gusta poner toda la carne en el asador",
+            "precio": 10.20
+        } 
+    ],
+
+    "bebidas": [
+        {
+            "id": 1,
+            "nombre": "Coca Cola",
+            "imagen": "https://d2j6dbq0eux0bg.cloudfront.net/images/26330001/2458603073.jpg",
+            "precio": 2.50
+        },
+        {
+            "id": 2,
+            "nombre": "Cocacola Light",
+            "imagen": "https://pollossanjuan.es/wp-content/uploads/2018/04/cocacolalight_lata-700x1216.jpg",
+            "precio": 2.50
+        },
+        {
+            "id": 3,
+            "nombre": "Cocacola Cero",
+            "imagen": "https://static.ulabox.com/media/172183_xl.jpg",
+            "precio": 2.50
+        },
+        {
+            "id": 4,
+            "nombre": "Fanta Naranja",
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Fanta_logo_%282009%29.jpg",
+            "precio": 2.50
+        },
+        {
+            "id": 5,
+            "nombre": "Fanta Limon",
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Fanta_logo_%282009%29.jpg",
+            "precio": 2.50
+        },
+        {
+            "id": 6,
+            "nombre": "Agua Mineral",
+            "imagen": "https://www.ifema.es/mbfw-madrid/img/xl/fontvella-fonter/noticia_font_vella.jpg",
+            "precio": 1.50
+        },
+        {
+            "id": 7,
+            "nombre": "Agua con Gas",
+            "imagen": "https://spinfood.es/2197-thickbox_default/agua-con-gas-original-1l-vichy-catalan.jpg",
+            "precio": 2.50
+        },
+        {
+            "id": 8,
+            "nombre": "Nestea",
+            "imagen": "https://pizzanapoli.es/3112-home_default/Nestea.jpg",
+            "precio": 2.50
+        },
+        {
+            "id": 9,
+            "nombre": "Sprite",
+            "imagen": "https://static.ulabox.com/media/174125_l1.jpg",
+            "precio": 2.50
+        },
+        {
+            "id": 10,
+            "nombre": "Trina",
+            "imagen": "https://www.supertambo.es/web/tambo/img/productos/4526/trinaranjus_lata_n_31.jpg",
+            "precio": 2.50
+        }
+        
+        
+
+    ],
+    
+    "vinos": [
+        {
+            "id": 1,
+            "nombre": "Viña el Pisón 2019",
+            "puntuacion": 99,
+            "año":2019,
+            "descripción": "Elaborado con variedad de uva tempranillo, se trata de un vino elegante y complejo, de finos taninos y potencia, con aromas a bayas silvestres, especias, hierba y regaliz que lo convierten en un vino envolvente",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170227936.jpg",
+            "precio": 350.00
+        },
+        {
+            "id": 2,
+            "nombre": "Vega Sicilia Único Reserva",
+            "puntuacion": 98,
+            "año":2022,
+            "descripción": "Con un intenso color cereza y aromas a fruta madura y especias, este vino D. O. Ribera del Duero es un tinto fino con 5% de uva cabernet sauvignon que rinde homenaje a la tradición vinícola más arraigada. Equilibrado, persistente y estructurado durante su cata",
+            "imagen":"https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170255150.jpg",
+            "precio": 413.25
+        },
+        {
+            "id": 3,
+            "nombre": "La Faraona 2017",
+            "puntuacion": 98,
+            "año":2017,
+            "descripción": "Nacido de viñedos con más de setenta años de antigüedad, el vino La Faraona 2017 de uva mencía se sitúa entre los mejores vinos tintos españoles. Muy balanceado, intenso, de gran elegancia y taninos muy finos",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170274038.jpg",
+            "precio": 1190.90
+        },
+        {
+            "id": 4,
+            "nombre": "Alabaster 2018",
+            "puntuacion": 97,
+            "año":2018,
+            "descripción": "Sin duda una de las opciones perfectas para saborear un excelente vino D. O. Toro, el Alabaster 2018 es un tinto elaborado con la variedad de uva tradicional que da nombre a su denominación de origen. Un vino clásico con las cualidades que se esperan de los mejores Toro, largo y sedoso en el paladar",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170291842.jpg",
+            "precio": 139.90
+        },
+        {
+            "id": 5,
+            "nombre": "Vega Sicilia Único 2010 Magnum",
+            "puntuacion": 96,
+            "año":2010,
+            "descripción": "La añada de 2010 de la versión magnum de Vega Sicilia Único supone una cita irrepetible con lo mejor de lo mejor de la enología. Una estructura delicada y taninos finísimos, con aromas rústicos a frutas negras y tabaco",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170396801.jpg",
+            "precio": 966.79
+        },
+        {
+            "id": 6,
+            "nombre": "Doix 2016",
+            "puntuacion": 94,
+            "año":2016,
+            "descripción": "La Finca Mas Doix, ubicada en la zona del Montsant y la Sierra del Molló, elabora desde hace más de veinte años sus vinos Doix. Este D. O. Priorat alcanza una calidad extraordinaria con su Doix 2016, un vino de uva cariñena y garnacha elegante, de buena acidez y largo en la cata",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170543183.jpg",
+            "precio": 89.90
+        },
+        {
+            "id": 7,
+            "nombre": "Sierra Cantabria Magico 2016",
+            "puntuacion": 97,
+            "año":2016,
+            "descripción": "Un D. O. Rioja no podía faltar y qué mejor representante que el Sierra Cantabria Mágico 2016, con más de siete variedades de uva: tempranillo, garnacha, calagraño, torrontés, viura, graciano y petit bouschet. Un vino de un espectacular color púrpura realzado por los arándanos y el regaliz, complejo y de acidez bien equilibrada",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170364817.jpg",
+            "precio": 139.80
+        },
+        {
+            "id": 8,
+            "nombre": "Casa Castillo Pie Franco",
+            "puntuacion": 95,
+            "año": 2019,
+            "descripción": "Este vino hecho de uvas monastrell es el más representativo de la bodega Casa Castillo. Un D. O. Jumilla de un color granate oscuro con aromas a fruta madura, así como toques balsámicos y a café. De taninos finos, sabor intenso y persistencia en boca, una personalidad rústica que lo hace destacar",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170504571.jpg",
+            "precio": 148.30
+        },
+        {
+            "id": 9,
+            "nombre": "Les Aubaguetes",
+            "puntuacion": 96,
+            "año": 2018,
+            "descripción": "Un vino de herencia tradicional D. O. Priorat y a cargo del enólogo Álvaro Palacios. Les Aubaguetes 2018 será perfecto para quienes disfruten de una experiencia intensa, larga y persistente en boca. Está elaborado principalmente de uva garnacha, junto a otras variedades, y son destacables sus fragancias balsámicas",
+            "imagen": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/07/13/16577170441792.jpg",
+            "precio": 160.00
+        },
+        {
+            "id": 10,
+            "nombre": "Vino de la casa",
+            "puntuacion": 30,
+            "año": 2022,
+            "descripción": "El de toda la vida",
+            "imagen": "https://static.wixstatic.com/media/85a36f_962c8f2e43c442aea2a3484baa53f04d~mv2.jpg/v1/fill/w_1000,h_1333,al_c,q_90,usm_0.66_1.00_0.01/85a36f_962c8f2e43c442aea2a3484baa53f04d~mv2.jpg",
+            "precio": 10.00
+        }
+        ]
+    }
